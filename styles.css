@@ -295,6 +295,9 @@ section { padding: 5rem 2rem; }
   font-size: .9rem; font-weight: 700; color: var(--navy);
   letter-spacing: .02em; line-height: 1.3;
 }
+.member-org {
+  font-size: .72rem; color: var(--muted); margin-top: .2rem;
+}
 .member-links {
   display: flex; gap: .5rem; justify-content: center;
   margin-top: .75rem;
