@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taiwan Q-Fin Hub | 台灣量子金融實驗室</title>
+  <meta name="description" content="Taiwan Q-Fin Hub – Quantum Finance research, education, and US career pathways for Taiwanese youth. 台灣量子金融實驗室" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #0d1b3e;
+      --blue:   #1a3a6e;
+      --accent: #e07b1a;
+      --gold:   #f5a623;
+      --sky:    #3b82f6;
+      --light:  #f0f4ff;
+      --white:  #ffffff;
+      --text:   #1e2a45;
+      --muted:  #5a6a8a;
+      --border: rgba(59,130,246,.2);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Noto Sans TC', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    /* ── Lang Toggle ── */
+    #lang-bar {
+      position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+      display: flex; justify-content: flex-end; align-items: center;
+      padding: .5rem 2rem;
+      background: var(--navy);
+    }
+    #lang-bar button {
+      background: none; border: 1px solid rgba(255,255,255,.35);
+      color: #fff; padding: .25rem .8rem; border-radius: 4px;
+      font-size: .8rem; cursor: pointer; margin-left: .5rem;
+      transition: background .2s, border-color .2s;
+    }
+    #lang-bar button.active, #lang-bar button:hover {
+      background: var(--accent); border-color: var(--accent);
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 36px; left: 0; right: 0; z-index: 99;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .75rem 2.5rem;
+      background: rgba(13,27,62,.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+    .nav-logo img { height: 42px; }
+    .nav-logo span { color: #fff; font-weight: 700; font-size: 1rem; line-height: 1.2; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.8); text-decoration: none;
+      font-size: .9rem; font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--navy) 0%, #0a2040 55%, #0d3060 100%);
+      padding: 7rem 2rem 4rem;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 50%, rgba(59,130,246,.12) 0%, transparent 70%),
+                  radial-gradient(ellipse at 20% 80%, rgba(224,123,26,.08) 0%, transparent 50%);
+    }
+    .hero-inner { position: relative; max-width: 860px; }
+    .hero-logo { width: 180px; margin-bottom: 2rem; filter: drop-shadow(0 4px 24px rgba(0,0,0,.4)); }
+    .hero-title-en {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800; color: #fff;
+      letter-spacing: -.01em; line-height: 1.1;
+    }
+    .hero-title-zh {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700; color: var(--gold);
+      margin-top: .5rem; letter-spacing: .05em;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 1.1rem; color: rgba(255,255,255,.72);
+      max-width: 640px; margin-left: auto; margin-right: auto;
+    }
+    .hero-sub.zh { font-family: 'Noto Sans TC', sans-serif; }
+    .hero-cta {
+      margin-top: 2.5rem; display: flex; gap: 1rem;
+      justify-content: center; flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: .8rem 2rem; border-radius: 6px;
+      text-decoration: none; font-weight: 600; font-size: .95rem;
+      transition: background .2s, transform .15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #c56a10; transform: translateY(-2px); }
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,.4); color: #fff;
+      padding: .8rem 2rem; border-radius: 6px;
+      text-decoration: none; font-weight: 600; font-size: .95rem;
+      transition: border-color .2s, transform .15s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    /* ── Sections ── */
+    section { padding: 5rem 2rem; }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .section-label {
+      font-size: .78rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: .75rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800; color: var(--navy);
+      line-height: 1.2;
+    }
+    .section-title .zh {
+      display: block; font-family: 'Noto Sans TC', sans-serif;
+      font-size: .65em; font-weight: 700; color: var(--muted);
+      margin-top: .3rem;
+    }
+    .section-intro {
+      margin-top: 1.25rem; max-width: 700px;
+      color: var(--muted); font-size: 1.02rem;
+    }
+
+    /* ── About ── */
+    #about { background: var(--light); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3rem; margin-top: 3rem; align-items: start;
+    }
+    .about-block h3 {
+      font-size: 1.1rem; font-weight: 700; color: var(--navy);
+      margin-bottom: .75rem;
+    }
+    .about-block p { color: var(--muted); font-size: .97rem; }
+    .about-block p + p { margin-top: .75rem; }
+    .about-block.zh h3, .about-block.zh p { font-family: 'Noto Sans TC', sans-serif; }
+    .stat-row {
+      display: flex; gap: 2rem; flex-wrap: wrap;
+      margin-top: 2rem; padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .stat { text-align: center; flex: 1; min-width: 120px; }
+    .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--accent); }
+    .stat-label { font-size: .82rem; color: var(--muted); margin-top: .2rem; }
+    .stat-label.zh { font-family: 'Noto Sans TC', sans-serif; }
+
+    /* ── Program ── */
+    #program { background: #fff; }
+    .program-cards {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .pcard {
+      border: 1px solid var(--border); border-radius: 12px;
+      padding: 2rem 1.75rem;
+      transition: box-shadow .2s, transform .15s;
+    }
+    .pcard:hover { box-shadow: 0 8px 32px rgba(26,58,110,.12); transform: translateY(-3px); }
+    .pcard-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .pcard h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .4rem; }
+    .pcard h3 .zh { font-family: 'Noto Sans TC', sans-serif; font-weight: 500; color: var(--muted); font-size: .88em; display: block; margin-top: .1rem; }
+    .pcard p { font-size: .9rem; color: var(--muted); }
+    .pcard p.zh { font-family: 'Noto Sans TC', sans-serif; }
+
+    /* ── Schedule ── */
+    #schedule { background: var(--light); }
+    .timeline { margin-top: 3rem; display: flex; flex-direction: column; gap: 0; }
+    .trow {
+      display: grid; grid-template-columns: 140px 1fr;
+      gap: 1.5rem; padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .trow:last-child { border-bottom: none; }
+    .trow-week {
+      font-size: .82rem; font-weight: 700;
+      color: var(--accent); text-transform: uppercase;
+      letter-spacing: .06em; padding-top: .15rem;
+    }
+    .trow-content h4 { font-size: .97rem; font-weight: 600; color: var(--navy); }
+    .trow-content h4 .zh { font-family: 'Noto Sans TC', sans-serif; font-size: .9em; font-weight: 400; color: var(--muted); display: block; }
+    .trow-content ul {
+      margin-top: .5rem; padding-left: 1.1rem;
+      color: var(--muted); font-size: .88rem;
+    }
+    .trow-content ul.zh { font-family: 'Noto Sans TC', sans-serif; }
+    .trow-content ul li { margin-bottom: .25rem; }
+
+    /* ── Partners ── */
+    #partners { background: #fff; }
+    .partner-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .partner-card {
+      border: 1px solid var(--border); border-radius: 10px;
+      padding: 1.75rem; text-align: center;
+      transition: box-shadow .2s;
+    }
+    .partner-card:hover { box-shadow: 0 6px 24px rgba(26,58,110,.1); }
+    .partner-card .badge {
+      display: inline-block; background: var(--navy); color: #fff;
+      border-radius: 6px; padding: .3rem .75rem;
+      font-size: .75rem; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; margin-bottom: 1rem;
+    }
+    .partner-card h3 { font-size: .97rem; font-weight: 700; color: var(--navy); }
+    .partner-card p { font-size: .85rem; color: var(--muted); margin-top: .5rem; }
+    .partner-card p.zh { font-family: 'Noto Sans TC', sans-serif; }
+
+    /* ── Eligibility ── */
+    #eligibility { background: var(--light); }
+    .elig-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2.5rem; margin-top: 3rem;
+    }
+    .elig-box { background: #fff; border-radius: 12px; padding: 2rem; border: 1px solid var(--border); }
+    .elig-box h3 {
+      font-size: 1rem; font-weight: 700; color: var(--navy);
+      margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem;
+    }
+    .elig-box h3 .zh { font-family: 'Noto Sans TC', sans-serif; font-size: .85em; color: var(--muted); font-weight: 500; }
+    .elig-box ul { list-style: none; padding: 0; }
+    .elig-box ul li {
+      padding: .45rem 0;
+      font-size: .9rem; color: var(--muted);
+      border-bottom: 1px solid #f0f0f0;
+      display: flex; gap: .6rem;
+    }
+    .elig-box ul li:last-child { border-bottom: none; }
+    .elig-box ul li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .elig-box ul.zh li { font-family: 'Noto Sans TC', sans-serif; }
+
+    /* ── Funding ── */
+    #funding { background: #fff; }
+    .funding-cards {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .fcard {
+      border-radius: 12px; padding: 2rem;
+      border: 1px solid var(--border);
+    }
+    .fcard.highlight {
+      background: var(--navy); border-color: var(--navy); color: #fff;
+    }
+    .fcard h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+    .fcard.highlight h3 { color: var(--gold); }
+    .fcard h3 .zh { font-family: 'Noto Sans TC', sans-serif; font-size: .85em; font-weight: 400; display: block; }
+    .fcard .amount {
+      font-size: 2rem; font-weight: 800; color: var(--accent);
+      letter-spacing: -.01em;
+    }
+    .fcard.highlight .amount { color: var(--gold); }
+    .fcard .desc { font-size: .88rem; color: var(--muted); margin-top: .5rem; }
+    .fcard.highlight .desc { color: rgba(255,255,255,.65); }
+    .fcard.highlight .desc.zh { font-family: 'Noto Sans TC', sans-serif; }
+    .fcard-items { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.15); }
+    .fcard.highlight .fcard-items { border-top-color: rgba(255,255,255,.2); }
+    .fcard-item {
+      display: flex; justify-content: space-between;
+      font-size: .88rem; padding: .35rem 0;
+      color: var(--muted); border-bottom: 1px solid #f5f5f5;
+    }
+    .fcard.highlight .fcard-item { color: rgba(255,255,255,.75); border-bottom-color: rgba(255,255,255,.1); }
+    .fcard-item:last-child { border-bottom: none; }
+    .fcard-item .zh { font-family: 'Noto Sans TC', sans-serif; }
+    .fcard-item strong { color: var(--navy); }
+    .fcard.highlight .fcard-item strong { color: #fff; }
+
+    /* ── CTA ── */
+    #cta {
+      background: linear-gradient(135deg, var(--navy) 0%, #0a2040 100%);
+      text-align: center; padding: 6rem 2rem;
+    }
+    #cta h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: #fff; }
+    #cta h2 .zh { font-family: 'Noto Sans TC', sans-serif; color: var(--gold); font-size: .7em; display: block; margin-top: .4rem; }
+    #cta p { color: rgba(255,255,255,.7); margin-top: 1rem; font-size: 1rem; }
+    #cta p.zh { font-family: 'Noto Sans TC', sans-serif; }
+    #cta .cta-row { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Footer ── */
+    footer {
+      background: #080f1f; color: rgba(255,255,255,.45);
+      text-align: center; padding: 2rem; font-size: .82rem;
+    }
+    footer a { color: rgba(255,255,255,.5); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    /* ── Lang visibility ── */
+    .en, .zh { transition: opacity .2s; }
+    body.lang-zh .en { display: none; }
+    body.lang-en .zh { display: none; }
+    body { }  /* default shows both (no class = show all) */
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      nav { padding: .75rem 1rem; }
+      .nav-links { display: none; }
+      .about-grid, .elig-grid, .funding-cards { grid-template-columns: 1fr; }
+      .trow { grid-template-columns: 90px 1fr; }
+      #lang-bar { padding: .5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lang Bar -->
+  <div id="lang-bar">
+    <button id="btn-en" onclick="setLang('en')">English</button>
+    <button id="btn-zh" onclick="setLang('zh')">中文</button>
+    <button id="btn-bi" class="active" onclick="setLang('bi')">EN/中</button>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <a class="nav-logo" href="#hero">
+      <img src="Taiwan QFin SM.png" alt="Taiwan Q-Fin Hub Logo" />
+      <span>Taiwan Q-Fin Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#eligibility">Eligibility</a></li>
+      <li><a href="#funding">Funding</a></li>
+      <li><a href="#cta">Apply</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-inner">
+      <img class="hero-logo" src="Taiwan QFin SM.png" alt="Taiwan Q-Fin Hub" />
+      <div class="hero-title-en">Taiwan Q-Fin Hub</div>
+      <div class="hero-title-zh">台灣量子金融實驗室</div>
+      <p class="hero-sub en">Bridging Taiwan's next generation with global quantum finance research, US university labs, and Wall Street innovation.</p>
+      <p class="hero-sub zh">連結台灣新世代與全球量子金融研究、美國大學實驗室及華爾街創新前沿。</p>
+      <div class="hero-cta">
+        <a href="#program" class="btn-primary en">Explore Program</a>
+        <a href="#program" class="btn-primary zh">了解計畫</a>
+        <a href="#cta" class="btn-outline en">Apply Now</a>
+        <a href="#cta" class="btn-outline zh">立即申請</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About Us / 關於我們</div>
+      <h2 class="section-title">
+        Who We Are
+        <span class="zh">我們是誰</span>
+      </h2>
+      <div class="about-grid">
+        <div class="about-block en">
+          <h3>Our Mission</h3>
+          <p>Taiwan Q-Fin Hub is an initiative connecting Taiwanese youth with the forefront of quantum computing and quantitative finance. We partner with leading US research universities and industry organizations to give participants hands-on experience in hybrid quantum-classical computing (HQCC), AI-driven financial engineering, and international capital markets.</p>
+          <p>Our flagship overseas program is supported by Taiwan's Ministry of Education Youth Development Agency, under the <em>Youth Overseas Dream Fund</em>.</p>
+        </div>
+        <div class="about-block zh">
+          <h3>我們的使命</h3>
+          <p>台灣量子金融實驗室致力於將台灣青年與量子計算和量化金融的最前沿相連結。我們與美國頂尖研究大學及產業組織合作，讓參與者在混合量子古典計算（HQCC）、AI驅動金融工程及國際資本市場獲得實戰經驗。</p>
+          <p>本計畫旗艦海外項目由教育部青年發展署「青年百億海外圓夢基金」支持。</p>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-num">10</div>
+          <div class="stat-label en">Spots per cohort</div>
+          <div class="stat-label zh">每屆名額</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">35</div>
+          <div class="stat-label en">Days in the US</div>
+          <div class="stat-label zh">美國見習天數</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3</div>
+          <div class="stat-label en">Partner universities</div>
+          <div class="stat-label zh">合作大學</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">NT$698K</div>
+          <div class="stat-label en">Scholarship per person</div>
+          <div class="stat-label zh">每人獎勵總額</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section id="program">
+    <div class="container">
+      <div class="section-label">Program / 計畫內容</div>
+      <h2 class="section-title">
+        Quantum Finance US Internship
+        <span class="zh">量子金融：赴美職涯領航</span>
+      </h2>
+      <p class="section-intro en">A 35-day immersive program in the Greater New York area (July 6 – August 9), combining lab visits, expert seminars, and industry networking at three world-class universities.</p>
+      <p class="section-intro zh" style="font-family:'Noto Sans TC',sans-serif; margin-top:.5rem;">為期35天的大紐約區沉浸式計畫（7月6日至8月9日），結合實驗室參訪、專家講座與三所世界頂尖大學的業界交流。</p>
+      <div class="program-cards">
+        <div class="pcard">
+          <div class="pcard-icon">⚛️</div>
+          <h3>HQCC Research Labs<span class="zh">量子混合計算實驗室</span></h3>
+          <p class="en">Hands-on visits to Hybrid Quantum-Classical Computing labs at NJIT and Stony Brook University.</p>
+          <p class="zh">親訪NJIT與石溪大學的HQCC實驗室，體驗量子古典混合計算前沿研究。</p>
+        </div>
+        <div class="pcard">
+          <div class="pcard-icon">📈</div>
+          <h3>Financial Engineering Seminars<span class="zh">金融工程專題講座</span></h3>
+          <p class="en">Expert-led sessions on quantum algorithms applied to portfolio optimization, risk modeling, and AI-driven trading.</p>
+          <p class="zh">量子演算法應用於投資組合優化、風險建模及AI驅動交易的專家主講課程。</p>
+        </div>
+        <div class="pcard">
+          <div class="pcard-icon">🤝</div>
+          <h3>Industry Networking<span class="zh">產業專家座談</span></h3>
+          <p class="en">Direct access to NYC investment industry leaders and Taiwanese-American tech professionals via TAITA East.</p>
+          <p class="zh">透過TAITA美東分會，直接接觸紐約投資業領袖及台美科技專業人士。</p>
+        </div>
+        <div class="pcard">
+          <div class="pcard-icon">🧠</div>
+          <h3>Quantum AI Applications<span class="zh">量子AI應用</span></h3>
+          <p class="en">Cross-campus sessions on Quantum AI and AI Data Center applications hosted across NJIT, SUNY, and Fordham.</p>
+          <p class="zh">跨校Quantum AI與AI資料中心應用講座，涵蓋NJIT、SUNY與福坦謨大學。</p>
+        </div>
+        <div class="pcard">
+          <div class="pcard-icon">🌐</div>
+          <h3>Interdisciplinary Urban Campus<span class="zh">都會跨領域學習</span></h3>
+          <p class="en">Fordham University's Manhattan & Bronx campuses offer cross-disciplinary finance, AI, and international studies sessions.</p>
+          <p class="zh">福坦謨大學曼哈頓與布朗克斯校區提供跨領域金融、AI及國際研究課程。</p>
+        </div>
+        <div class="pcard">
+          <div class="pcard-icon">📝</div>
+          <h3>Research Output<span class="zh">研究成果展現</span></h3>
+          <p class="en">Participants produce English reports (2,000+ words) and present findings at domestic or international conferences within one year.</p>
+          <p class="zh">學員須完成英文成果報告（2,000字以上）並於一年內在國內外研討會公開發表。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule">
+    <div class="container">
+      <div class="section-label">Schedule / 行程</div>
+      <h2 class="section-title">
+        5-Week Itinerary
+        <span class="zh">五週行程概覽</span>
+      </h2>
+      <div class="timeline">
+        <div class="trow">
+          <div class="trow-week">Week 1<br/>第一週</div>
+          <div class="trow-content">
+            <h4>NJIT – Newark, New Jersey<span class="zh">新澤西理工學院 · 紐華克</span></h4>
+            <ul class="en">
+              <li>Campus and research environment orientation</li>
+              <li>Financial Engineering & HQCC Lab visits (2 sessions)</li>
+              <li>HQCC thematic lectures and research exchanges (2 sessions)</li>
+              <li>NYC investment industry practice & expert roundtables (2 sessions)</li>
+            </ul>
+            <ul class="zh" style="font-family:'Noto Sans TC',sans-serif">
+              <li>校園與研究環境導覽</li>
+              <li>金融工程、HQCC相關實驗室參訪（2場）</li>
+              <li>HQCC專題講座與研究交流（2場）</li>
+              <li>紐約投資產業實務與專家座談（2場）</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trow">
+          <div class="trow-week">Week 2<br/>第二週</div>
+          <div class="trow-content">
+            <h4>Stony Brook University (SUNY) – Long Island<span class="zh">紐約州立大學石溪分校 · 長島</span></h4>
+            <ul class="en">
+              <li>In-depth HQCC × Finance thematic workshops (2 sessions)</li>
+              <li>Seminar with Financial AI researchers and professors</li>
+              <li>Group discussion and learning synthesis (2 sessions)</li>
+              <li>NYC investment industry practice & expert panels (2 sessions)</li>
+            </ul>
+            <ul class="zh" style="font-family:'Noto Sans TC',sans-serif">
+              <li>深入研究HQCC科技於金融主題工作坊（2場）</li>
+              <li>與金融AI研究工程師及教授座談</li>
+              <li>小組討論與學習成果整理（2場）</li>
+              <li>紐約投資產業實務與專家座談（2場）</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trow">
+          <div class="trow-week">Week 3<br/>第三週</div>
+          <div class="trow-content">
+            <h4>NJIT / SUNY / Industry – Cross-campus<span class="zh">NJIT / SUNY / 業界 · 跨校合作</span></h4>
+            <ul class="en">
+              <li>HQCC & Quantum AI technology lectures (2 sessions)</li>
+              <li>Advanced research training + industry/culture introduction (2 sessions)</li>
+              <li>Cross-campus student & faculty exchange activities (2 sessions)</li>
+              <li>NYC investment industry roundtable</li>
+            </ul>
+            <ul class="zh" style="font-family:'Noto Sans TC',sans-serif">
+              <li>HQCC與Quantum AI科技講座（2場）</li>
+              <li>高階研究訓練產業／文化介紹（2場）</li>
+              <li>跨校師生及產業交流活動（2場）</li>
+              <li>紐約投資產業實務與專家座談</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trow">
+          <div class="trow-week">Week 4<br/>第四週</div>
+          <div class="trow-content">
+            <h4>Fordham University – Manhattan / Bronx<span class="zh">福坦謨大學 · 曼哈頓 / 布朗克斯</span></h4>
+            <ul class="en">
+              <li>Urban university interdisciplinary lectures (2 sessions)</li>
+              <li>HQCC & AI Data Center applications symposium (2 sessions)</li>
+              <li>Industry expert visits arranged by international finance mentors (2 sessions)</li>
+              <li>NYC investment practice & expert roundtable</li>
+            </ul>
+            <ul class="zh" style="font-family:'Noto Sans TC',sans-serif">
+              <li>都會型大學跨領域講座（2場）</li>
+              <li>HQCC與AI Data Center應用專題座談（2場）</li>
+              <li>國際金融業師安排產業專家參訪（2場）</li>
+              <li>紐約投資產業實務與專家座談</li>
+            </ul>
+          </div>
+        </div>
+        <div class="trow">
+          <div class="trow-week">Week 5<br/>第五週</div>
+          <div class="trow-content">
+            <h4>Synthesis & Wrap-up<span class="zh">成果整理與總結</span></h4>
+            <ul class="en">
+              <li>Individual results compilation and sharing (2 sessions)</li>
+              <li>Final group debriefs (2 sessions)</li>
+              <li>Post-program networking and follow-up connections</li>
+              <li>Return flight to Taiwan</li>
+            </ul>
+            <ul class="zh" style="font-family:'Noto Sans TC',sans-serif">
+              <li>學員成果整理與分享（2場）</li>
+              <li>總結討論（2場）</li>
+              <li>參訪團後續連結與交流</li>
+              <li>返程回台灣</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section id="partners">
+    <div class="container">
+      <div class="section-label">Partners / 合作夥伴</div>
+      <h2 class="section-title">
+        Our Academic & Industry Partners
+        <span class="zh">學術與產業合作夥伴</span>
+      </h2>
+      <div class="partner-grid">
+        <div class="partner-card">
+          <div class="badge">University</div>
+          <h3>New Jersey Institute of Technology</h3>
+          <p class="en">A leading public research university in Newark, NJ, renowned for engineering, AI, quantum computing research, and applied sciences.</p>
+          <p class="zh">位於紐澤西紐華克的知名公立研究型大學，以工程、AI與量子相關研究聞名。</p>
+        </div>
+        <div class="partner-card">
+          <div class="badge">University</div>
+          <h3>Stony Brook University (SUNY)</h3>
+          <p class="en">A flagship campus of the State University of New York system, excelling in physics, life sciences, AI, and engineering — collaborating with Brookhaven National Laboratory.</p>
+          <p class="zh">紐約州立大學旗艦校區，以物理、生命科學、AI及工程見長，並與布魯克海文國家實驗室合作。</p>
+        </div>
+        <div class="partner-card">
+          <div class="badge">University</div>
+          <h3>Fordham University</h3>
+          <p class="en">A prominent Jesuit university in New York City with campuses in Manhattan and the Bronx, known for AI, data science, business, law, and international studies.</p>
+          <p class="zh">知名耶穌會大學，曼哈頓與布朗克斯校區，以AI、資料科學、商學與國際研究著稱。</p>
+        </div>
+        <div class="partner-card">
+          <div class="badge">Industry</div>
+          <h3>TAITA East Coast</h3>
+          <p class="en">Taiwanese American Industrial Technology Association – East, a nonprofit bridging Taiwan's tech talent with US East Coast industry networks and innovation ecosystems.</p>
+          <p class="zh">美東台美產業科技協會，橋接台灣科技人才與美東產業網絡及創新生態系的非營利組織。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eligibility -->
+  <section id="eligibility">
+    <div class="container">
+      <div class="section-label">Eligibility / 申請資格</div>
+      <h2 class="section-title">
+        Who Can Apply
+        <span class="zh">申請條件</span>
+      </h2>
+      <div class="elig-grid">
+        <div class="elig-box">
+          <h3>✅ Required <span class="zh">必要條件</span></h3>
+          <ul class="en">
+            <li>ROC nationality, aged 18–30</li>
+            <li>Full participation in all program activities (including pre-departure training, info sessions, boot camp, and results presentation)</li>
+            <li>Own professional equipment (laptop, smartphone) and presentable attire</li>
+            <li>Submit final report and program video</li>
+          </ul>
+          <ul class="zh" style="display:none; font-family:'Noto Sans TC',sans-serif">
+            <li>具中華民國國籍，18–30歲之青年</li>
+            <li>須全程參與計畫行程（含行前培訓、說明會、集訓及成果發表會）</li>
+            <li>自備筆記型電腦、智慧型手機及整齊服裝</li>
+            <li>依規繳交成果報告與成果影片</li>
+          </ul>
+        </div>
+        <div class="elig-box">
+          <h3>⭐ Preferred <span class="zh">優先條件</span></h3>
+          <ul class="en">
+            <li>English proficiency equivalent to CEFR B1 or above; strong communication skills preferred</li>
+            <li>Background in technology-related fields: STEM, management, or finance/quantitative disciplines</li>
+            <li>Strong motivation for quantum finance and US industry exposure</li>
+          </ul>
+          <ul class="zh" style="display:none; font-family:'Noto Sans TC',sans-serif">
+            <li>英文能力達CEFR B1以上，能進行基礎對話；良好溝通能力者尤佳</li>
+            <li>具備科技產業相關領域背景（理工、管理 / 金融）</li>
+            <li>對量子金融及美國業界有強烈學習動機</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funding -->
+  <section id="funding">
+    <div class="container">
+      <div class="section-label">Funding / 經費</div>
+      <h2 class="section-title">
+        Scholarship Breakdown
+        <span class="zh">獎勵金規劃</span>
+      </h2>
+      <div class="funding-cards">
+        <div class="fcard highlight">
+          <h3>Total Award per Participant<span class="zh">每人獎勵金總額</span></h3>
+          <div class="amount">NT$ 698,627</div>
+          <p class="desc en">Majority administered by the organizer; covers living, accommodation, local transport, and lab access fees.</p>
+          <p class="desc zh">大部分由合作單位統一辦理，涵蓋餐費、住宿、當地交通及場地與實驗室使用費。</p>
+          <div class="fcard-items">
+            <div class="fcard-item"><span class="en">Organizer-managed (living, labs, etc.)</span><span class="zh" style="display:none">合作單位辦理項目</span><strong>NT$ 629,327</strong></div>
+            <div class="fcard-item"><span class="en">Participant pocket money</span><span class="zh" style="display:none">青年零用金</span><strong>NT$ 21,660</strong></div>
+            <div class="fcard-item"><span class="en">Participant self-managed</span><span class="zh" style="display:none">青年自理項目</span><strong>NT$ 69,300</strong></div>
+          </div>
+        </div>
+        <div class="fcard">
+          <h3>Participant Self-Managed Costs<span class="zh">青年自理項目</span></h3>
+          <div class="amount" style="color:var(--navy);">NT$ 69,300</div>
+          <p class="desc en">Items to be arranged and paid by participants directly.</p>
+          <p class="desc zh" style="font-family:'Noto Sans TC',sans-serif">由學員自行安排並支付的費用項目。</p>
+          <div class="fcard-items" style="border-top:1px solid #eee;">
+            <div class="fcard-item">
+              <span class="en">Round-trip economy airfare (Taiwan ↔ US)</span>
+              <span class="zh" style="display:none;font-family:'Noto Sans TC',sans-serif">來回經濟艙機票（台灣↔美國）</span>
+              <strong>NT$ 65,000</strong>
+            </div>
+            <div class="fcard-item">
+              <span class="en">Travel insurance (min. NT$10M accident / NT$1M medical)</span>
+              <span class="zh" style="display:none;font-family:'Noto Sans TC',sans-serif">旅遊保險（意外險1,000萬/醫療險100萬以上）</span>
+              <strong>NT$ 3,000</strong>
+            </div>
+            <div class="fcard-item">
+              <span class="en">US Visa / ESTA fee</span>
+              <span class="zh" style="display:none;font-family:'Noto Sans TC',sans-serif">美國ESTA簽證費</span>
+              <strong>NT$ 1,300</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="container">
+      <h2>Ready to Shape the Future of Quantum Finance?<span class="zh">準備好引領量子金融的未來了嗎？</span></h2>
+      <p class="en">Applications are open to ROC citizens aged 18–30. Join 10 pioneers heading to New York's leading research universities.</p>
+      <p class="zh">開放給18–30歲中華民國公民申請。加入前往紐約頂尖研究大學的10位先驅者。</p>
+      <div class="cta-row">
+        <a href="mailto:sandyhillwestport@gmail.com?subject=Taiwan%20Q-Fin%20Hub%20Application%20Inquiry" class="btn-primary en">Apply / Inquire</a>
+        <a href="mailto:sandyhillwestport@gmail.com?subject=台灣量子金融實驗室申請詢問" class="btn-primary zh">申請 / 詢問</a>
+        <a href="#about" class="btn-outline en">Learn More</a>
+        <a href="#about" class="btn-outline zh">了解更多</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Taiwan Q-Fin Hub · 台灣量子金融實驗室 &nbsp;|&nbsp; Supported by Taiwan Ministry of Education Youth Development Agency</p>
+    <p style="margin-top:.4rem; font-family:'Noto Sans TC',sans-serif;">教育部青年發展署「青年百億海外圓夢基金計畫」支持</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.body.classList.remove('lang-en', 'lang-zh');
+      document.querySelectorAll('#lang-bar button').forEach(b => b.classList.remove('active'));
+      if (lang === 'en') {
+        document.body.classList.add('lang-en');
+        document.getElementById('btn-en').classList.add('active');
+        // show en lists in eligibility
+        document.querySelectorAll('.elig-box ul.en').forEach(el => el.style.display = '');
+        document.querySelectorAll('.elig-box ul.zh').forEach(el => el.style.display = 'none');
+        // funding items
+        document.querySelectorAll('.fcard-item .en').forEach(el => el.style.display = '');
+        document.querySelectorAll('.fcard-item .zh').forEach(el => el.style.display = 'none');
+      } else if (lang === 'zh') {
+        document.body.classList.add('lang-zh');
+        document.getElementById('btn-zh').classList.add('active');
+        document.querySelectorAll('.elig-box ul.en').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.elig-box ul.zh').forEach(el => el.style.display = '');
+        document.querySelectorAll('.fcard-item .en').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.fcard-item .zh').forEach(el => el.style.display = '');
+      } else {
+        document.getElementById('btn-bi').classList.add('active');
+        document.querySelectorAll('.elig-box ul.en').forEach(el => el.style.display = '');
+        document.querySelectorAll('.elig-box ul.zh').forEach(el => el.style.display = '');
+        document.querySelectorAll('.fcard-item .en').forEach(el => el.style.display = '');
+        document.querySelectorAll('.fcard-item .zh').forEach(el => el.style.display = '');
+      }
+    }
+    // default bilingual
+    setLang('bi');
+  </script>
+</body>
+</html>
