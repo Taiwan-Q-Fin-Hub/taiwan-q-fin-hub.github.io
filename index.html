@@ -256,42 +256,69 @@
     .elig-box ul li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
     .elig-box ul.zh li { font-family: 'Noto Sans TC', sans-serif; }
 
-    /* ── Funding ── */
-    #funding { background: #fff; }
-    .funding-cards {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 1.5rem; margin-top: 3rem;
+    /* ── Selectivity Banner ── */
+    .selectivity-banner {
+      margin-top: 2.5rem;
+      background: linear-gradient(135deg, var(--navy) 0%, #0a2040 100%);
+      border-radius: 12px; padding: 2rem 2.5rem;
+      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
     }
-    .fcard {
-      border-radius: 12px; padding: 2rem;
-      border: 1px solid var(--border);
+    .sel-stat { text-align: center; flex-shrink: 0; }
+    .sel-stat-num {
+      font-size: 3rem; font-weight: 800; color: var(--gold);
+      line-height: 1; letter-spacing: -.02em;
     }
-    .fcard.highlight {
-      background: var(--navy); border-color: var(--navy); color: #fff;
+    .sel-stat-label { font-size: .78rem; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .08em; margin-top: .25rem; }
+    .sel-divider { width: 1px; height: 60px; background: rgba(255,255,255,.15); flex-shrink: 0; }
+    .sel-text { flex: 1; min-width: 220px; }
+    .sel-text h4 { color: #fff; font-size: 1.05rem; font-weight: 700; }
+    .sel-text h4 .zh { font-family: 'Noto Sans TC', sans-serif; font-size: .85em; font-weight: 500; color: var(--gold); display: block; margin-top: .15rem; }
+    .sel-text p { color: rgba(255,255,255,.65); font-size: .9rem; margin-top: .4rem; }
+    .sel-text p.zh { font-family: 'Noto Sans TC', sans-serif; }
+
+    /* ── Members ── */
+    #members { background: #fff; }
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.75rem; margin-top: 3rem;
     }
-    .fcard h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
-    .fcard.highlight h3 { color: var(--gold); }
-    .fcard h3 .zh { font-family: 'Noto Sans TC', sans-serif; font-size: .85em; font-weight: 400; display: block; }
-    .fcard .amount {
-      font-size: 2rem; font-weight: 800; color: var(--accent);
-      letter-spacing: -.01em;
+    .member-card {
+      text-align: center; padding: 1.75rem 1rem 1.5rem;
+      border: 1px solid var(--border); border-radius: 14px;
+      transition: box-shadow .2s, transform .15s;
     }
-    .fcard.highlight .amount { color: var(--gold); }
-    .fcard .desc { font-size: .88rem; color: var(--muted); margin-top: .5rem; }
-    .fcard.highlight .desc { color: rgba(255,255,255,.65); }
-    .fcard.highlight .desc.zh { font-family: 'Noto Sans TC', sans-serif; }
-    .fcard-items { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.15); }
-    .fcard.highlight .fcard-items { border-top-color: rgba(255,255,255,.2); }
-    .fcard-item {
-      display: flex; justify-content: space-between;
-      font-size: .88rem; padding: .35rem 0;
-      color: var(--muted); border-bottom: 1px solid #f5f5f5;
+    .member-card:hover { box-shadow: 0 8px 28px rgba(26,58,110,.12); transform: translateY(-3px); }
+    .member-photo {
+      width: 96px; height: 96px; border-radius: 50%;
+      margin: 0 auto 1rem;
+      background: var(--light);
+      border: 3px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
     }
-    .fcard.highlight .fcard-item { color: rgba(255,255,255,.75); border-bottom-color: rgba(255,255,255,.1); }
-    .fcard-item:last-child { border-bottom: none; }
-    .fcard-item .zh { font-family: 'Noto Sans TC', sans-serif; }
-    .fcard-item strong { color: var(--navy); }
-    .fcard.highlight .fcard-item strong { color: #fff; }
+    .member-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .member-photo .placeholder-icon {
+      font-size: 2.4rem; color: var(--muted); opacity: .45;
+      line-height: 1;
+    }
+    .member-name {
+      font-size: .9rem; font-weight: 700; color: var(--navy);
+      letter-spacing: .02em; line-height: 1.3;
+    }
+    .member-links {
+      display: flex; gap: .5rem; justify-content: center;
+      margin-top: .75rem;
+    }
+    .member-link {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .75rem; font-weight: 600; color: var(--muted);
+      text-decoration: none; padding: .25rem .6rem;
+      border: 1px solid var(--border); border-radius: 4px;
+      transition: color .15s, border-color .15s;
+    }
+    .member-link:hover { color: var(--accent); border-color: var(--accent); }
+    .member-link svg { width: 12px; height: 12px; fill: currentColor; flex-shrink: 0; }
 
     /* ── CTA ── */
     #cta {
@@ -322,9 +349,11 @@
     @media (max-width: 768px) {
       nav { padding: .75rem 1rem; }
       .nav-links { display: none; }
-      .about-grid, .elig-grid, .funding-cards { grid-template-columns: 1fr; }
+      .about-grid, .elig-grid { grid-template-columns: 1fr; }
       .trow { grid-template-columns: 90px 1fr; }
       #lang-bar { padding: .5rem 1rem; }
+      .sel-divider { display: none; }
+      .members-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
     }
   </style>
 </head>
@@ -349,7 +378,7 @@
       <li><a href="#schedule">Schedule</a></li>
       <li><a href="#partners">Partners</a></li>
       <li><a href="#eligibility">Eligibility</a></li>
-      <li><a href="#funding">Funding</a></li>
+      <li><a href="#members">Members</a></li>
       <li><a href="#cta">Apply</a></li>
     </ul>
   </nav>
@@ -615,7 +644,22 @@
         Who Can Apply
         <span class="zh">申請條件</span>
       </h2>
-      <div class="elig-grid">
+      <!-- Selectivity Banner -->
+      <div class="selectivity-banner">
+        <div class="sel-stat">
+          <div class="sel-stat-num">&lt;10%</div>
+          <div class="sel-stat-label en">Acceptance Rate</div>
+          <div class="sel-stat-label zh">錄取率</div>
+        </div>
+        <div class="sel-divider"></div>
+        <div class="sel-text">
+          <h4>Highly Selective — Single-Digit Acceptance Rate<span class="zh">高度競爭 · 個位數錄取率</span></h4>
+          <p class="en">Only 10 fellows are chosen each cohort from a competitive national applicant pool. Selection emphasizes academic excellence, cross-disciplinary curiosity, and the drive to represent Taiwan on the global quantum finance stage.</p>
+          <p class="zh">每屆僅錄取10名學員，從全國競爭激烈的申請者中選出。遴選重視學術卓越、跨領域好奇心，以及代表台灣站上全球量子金融舞台的強烈使命感。</p>
+        </div>
+      </div>
+
+      <div class="elig-grid" style="margin-top:2.5rem;">
         <div class="elig-box">
           <h3>✅ Required <span class="zh">必要條件</span></h3>
           <ul class="en">
@@ -648,49 +692,199 @@
     </div>
   </section>
 
-  <!-- Funding -->
-  <section id="funding">
+  <!-- Founding Members -->
+  <section id="members">
     <div class="container">
-      <div class="section-label">Funding / 經費</div>
+      <div class="section-label">Founding Members / 創始成員</div>
       <h2 class="section-title">
-        Scholarship Breakdown
-        <span class="zh">獎勵金規劃</span>
+        Inaugural Cohort
+        <span class="zh">首屆創始學員</span>
       </h2>
-      <div class="funding-cards">
-        <div class="fcard highlight">
-          <h3>Total Award per Participant<span class="zh">每人獎勵金總額</span></h3>
-          <div class="amount">NT$ 698,627</div>
-          <p class="desc en">Majority administered by the organizer; covers living, accommodation, local transport, and lab access fees.</p>
-          <p class="desc zh">大部分由合作單位統一辦理，涵蓋餐費、住宿、當地交通及場地與實驗室使用費。</p>
-          <div class="fcard-items">
-            <div class="fcard-item"><span class="en">Organizer-managed (living, labs, etc.)</span><span class="zh" style="display:none">合作單位辦理項目</span><strong>NT$ 629,327</strong></div>
-            <div class="fcard-item"><span class="en">Participant pocket money</span><span class="zh" style="display:none">青年零用金</span><strong>NT$ 21,660</strong></div>
-            <div class="fcard-item"><span class="en">Participant self-managed</span><span class="zh" style="display:none">青年自理項目</span><strong>NT$ 69,300</strong></div>
+      <p class="section-intro en">Ten exceptional individuals selected from a nationally competitive pool to pioneer Taiwan's quantum finance presence in the United States.</p>
+      <p class="section-intro zh" style="font-family:'Noto Sans TC',sans-serif; margin-top:.5rem;">從全國競爭中脫穎而出的十位傑出人才，共同開創台灣量子金融於美國的先鋒事業。</p>
+      <div class="members-grid">
+
+        <!-- Member 1 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <!-- Replace src with actual photo path, e.g. src="photos/hsiao-wei-lun.jpg" -->
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">HSIAO, WEI-LUN</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
           </div>
         </div>
-        <div class="fcard">
-          <h3>Participant Self-Managed Costs<span class="zh">青年自理項目</span></h3>
-          <div class="amount" style="color:var(--navy);">NT$ 69,300</div>
-          <p class="desc en">Items to be arranged and paid by participants directly.</p>
-          <p class="desc zh" style="font-family:'Noto Sans TC',sans-serif">由學員自行安排並支付的費用項目。</p>
-          <div class="fcard-items" style="border-top:1px solid #eee;">
-            <div class="fcard-item">
-              <span class="en">Round-trip economy airfare (Taiwan ↔ US)</span>
-              <span class="zh" style="display:none;font-family:'Noto Sans TC',sans-serif">來回經濟艙機票（台灣↔美國）</span>
-              <strong>NT$ 65,000</strong>
-            </div>
-            <div class="fcard-item">
-              <span class="en">Travel insurance (min. NT$10M accident / NT$1M medical)</span>
-              <span class="zh" style="display:none;font-family:'Noto Sans TC',sans-serif">旅遊保險（意外險1,000萬/醫療險100萬以上）</span>
-              <strong>NT$ 3,000</strong>
-            </div>
-            <div class="fcard-item">
-              <span class="en">US Visa / ESTA fee</span>
-              <span class="zh" style="display:none;font-family:'Noto Sans TC',sans-serif">美國ESTA簽證費</span>
-              <strong>NT$ 1,300</strong>
-            </div>
+
+        <!-- Member 2 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">HSIEH, YU-WEI</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
           </div>
         </div>
+
+        <!-- Member 3 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">HUANG, JIN-YANG</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">LIU, SHIH-CHUAN</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">CHIU, LU-MING</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 6 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">LIN, SI-WEI</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 7 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">HO, SHUN-YU</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 8 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">CHIU, TZU-CHING</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 9 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">LIN, YUN-HAO</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 10 -->
+        <div class="member-card">
+          <div class="member-photo">
+            <span class="placeholder-icon">&#128100;</span>
+          </div>
+          <div class="member-name">CHIANG, SHANG-CHENG</div>
+          <div class="member-links">
+            <a class="member-link" href="#" title="Personal Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 2c1.07 0 2.3.8 3.34 2.5H8.66C9.7 4.8 10.93 4 12 4zm-4.6 4h9.2c.24.64.42 1.3.52 2H6.88c.1-.7.28-1.36.52-2zM4.07 12h15.86a8.03 8.03 0 01-.52 2H4.59a7.96 7.96 0 01-.52-2zm1.04 4h13.78C17.6 19 14.94 20 12 20s-5.6-1-6.89-4z"/></svg>
+              Web
+            </a>
+            <a class="member-link" href="#" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -723,25 +917,17 @@
       if (lang === 'en') {
         document.body.classList.add('lang-en');
         document.getElementById('btn-en').classList.add('active');
-        // show en lists in eligibility
         document.querySelectorAll('.elig-box ul.en').forEach(el => el.style.display = '');
         document.querySelectorAll('.elig-box ul.zh').forEach(el => el.style.display = 'none');
-        // funding items
-        document.querySelectorAll('.fcard-item .en').forEach(el => el.style.display = '');
-        document.querySelectorAll('.fcard-item .zh').forEach(el => el.style.display = 'none');
       } else if (lang === 'zh') {
         document.body.classList.add('lang-zh');
         document.getElementById('btn-zh').classList.add('active');
         document.querySelectorAll('.elig-box ul.en').forEach(el => el.style.display = 'none');
         document.querySelectorAll('.elig-box ul.zh').forEach(el => el.style.display = '');
-        document.querySelectorAll('.fcard-item .en').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.fcard-item .zh').forEach(el => el.style.display = '');
       } else {
         document.getElementById('btn-bi').classList.add('active');
         document.querySelectorAll('.elig-box ul.en').forEach(el => el.style.display = '');
         document.querySelectorAll('.elig-box ul.zh').forEach(el => el.style.display = '');
-        document.querySelectorAll('.fcard-item .en').forEach(el => el.style.display = '');
-        document.querySelectorAll('.fcard-item .zh').forEach(el => el.style.display = '');
       }
     }
     // default bilingual
