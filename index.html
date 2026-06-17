@@ -3,115 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taiwan Q-Fin Hub</title>
-  <meta name="description" content="Taiwan Q-Fin Hub - Quantum Finance research, education, and US career pathways for Taiwanese youth." />
+  <title>Taiwan Q-Fin Hub | Quantum Computing, AI & FinTech Exchange</title>
+  <meta name="description" content="Taiwan Q-Fin Hub – A Taiwanese student cohort exploring quantum computing, AI, fintech, and quantitative finance through academic and professional exchange in Greater New York, Summer 2026." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Nav -->
+  <!-- ── Navigation ── -->
   <nav>
-    <a class="nav-logo" href="#hero">
-      <img src="Taiwan QFin SM.png" alt="Taiwan Q-Fin Hub Logo" />
+    <a class="nav-logo" href="index.html">
+      <img src="Taiwan QFin SM.png" alt="Taiwan Q-Fin Hub" />
       <span>Taiwan Q-Fin Hub</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="nav-active">Home</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="showcase.html">Showcase</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-active">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="showcase.html">Showcase</a></li>
+      </ul>
+      <a href="mailto:contact@taiwanqfinhub.org" class="nav-contact">Contact</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- Hero -->
-  <section id="hero">
-    <div class="hero-inner">
-      <img class="hero-logo" src="Taiwan QFin SM.png" alt="Taiwan Q-Fin Hub" />
-      <div class="hero-title-en">Taiwan Q-Fin Hub</div>
-      <p class="hero-sub">Bridging Taiwan's next generation with global quantum finance research, US university labs, and Wall Street innovation.</p>
-      <div class="hero-cta">
-        <a href="#program" class="btn-primary">Explore Program</a>
+  <!-- ══════════════════════════════════════════════════════
+       Section 1: Full-Width Hero
+       ══════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="img/ny2.jpg" alt="Manhattan Skyline Sunset" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="section-label">Summer 2026 · Greater New York</div>
+      <h1 class="hero-title">Taiwan Q-Fin Hub</h1>
+      <p class="hero-sub">Quantum Computing, AI & FinTech Exchange in Greater New York</p>
+      <p class="hero-desc">A Taiwanese student cohort exploring quantum computing, artificial intelligence, fintech, and quantitative finance through academic visits, professional exchange, and research reflection.</p>
+      <div class="hero-buttons">
+        <a href="#program-focus" class="btn btn-primary">Explore Program</a>
+        <a href="#cohort" class="btn btn-outline-light">Meet the Cohort</a>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about">
+  <!-- ══════════════════════════════════════════════════════
+       Section 2: About the Program
+       ══════════════════════════════════════════════════════ -->
+  <section class="about-section" id="about">
     <div class="container">
       <div class="section-label">About the Program</div>
-      <h2 class="section-title">Taiwan Q-Fin Hub Summer 2026</h2>
-      <div class="about-grid">
-        <div class="about-block">
+      <h2 class="section-title">A public profile for our Summer 2026 exchange.</h2>
+      <div class="about-layout">
+        <div class="about-body">
           <p>Taiwan Q-Fin Hub is a student cohort participating in Taiwan's Youth Overseas Dream Fund, supported by the Youth Development Administration, Ministry of Education.</p>
           <p>In summer 2026, the cohort will visit the Greater New York area for an academic and professional exchange program focused on quantum computing, artificial intelligence, financial technology, and quantitative finance.</p>
-        </div>
-        <div class="about-block">
           <p>This website serves as a public profile of the cohort and the summer program. It helps professors, university staff, industry professionals, and community partners understand what the students are working on, while also giving participants a credible page to link to their learning experience on LinkedIn and other professional profiles.</p>
-          <p>Through academic visits, expert discussions, professional networking, and post-program reflection, students will explore how emerging technologies connect with financial systems, research communities, and global innovation ecosystems.</p>
+        </div>
+        <div class="about-images">
+          <img src="img/ny4.jpg" alt="Roosevelt Island Tech Campus" />
+          <img src="img/NY5.jpg" alt="Wall Street Finance" />
+          <img src="img/ny3.jpg" alt="Manhattan Skyline and Statue of Liberty" />
         </div>
       </div>
-      <div class="glance">
-        <h3>At a Glance</h3>
-        <div class="glance-grid">
-          <div class="glance-item">
-            <div class="glance-icon"><svg viewBox="0 0 24 24"><path d="M12 21s7-4.35 7-11a7 7 0 1 0-14 0c0 6.65 7 11 7 11Z"/><path d="M12 10.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg></div>
-            <div>
-              <div class="glance-label">Location</div>
-              <div class="glance-value">Greater New York Area</div>
-            </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       Section 3: At a Glance
+       ══════════════════════════════════════════════════════ -->
+  <section class="glance-section" id="glance">
+    <div class="container">
+      <div class="section-label">At a Glance</div>
+      <div class="glance-strip">
+        <div class="glance-item">
+          <div class="glance-card-icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="glance-card-label">Location</div>
+            <div class="glance-card-value">Greater New York Area</div>
           </div>
-          <div class="glance-item">
-            <div class="glance-icon"><svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg></div>
-            <div>
-              <div class="glance-label">Time</div>
-              <div class="glance-value">July-August 2026</div>
-            </div>
+        </div>
+        <div class="glance-item">
+          <div class="glance-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div>
+            <div class="glance-card-label">Time</div>
+            <div class="glance-card-value">July–August 2026</div>
           </div>
-          <div class="glance-item">
-            <div class="glance-icon"><svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-8 0"/><path d="M3 21a7 7 0 0 1 14 0"/><path d="M17 8a3 3 0 0 1 0 6"/><path d="M21 21a5 5 0 0 0-4-4.9"/></svg></div>
-            <div>
-              <div class="glance-label">Cohort</div>
-              <div class="glance-value">10 Taiwanese student fellows</div>
-            </div>
+        </div>
+        <div class="glance-item">
+          <div class="glance-card-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div>
+            <div class="glance-card-label">Cohort</div>
+            <div class="glance-card-value">10 Taiwanese Student Fellows</div>
           </div>
-          <div class="glance-item">
-            <div class="glance-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M4 8h16"/><path d="M4 16h16"/><path d="M7 4c2 3 2 13 0 16"/><path d="M17 4c-2 3-2 13 0 16"/></svg></div>
-            <div>
-              <div class="glance-label">Themes</div>
-              <div class="glance-value">Quantum Computing · AI · FinTech · Quantitative Finance</div>
-            </div>
+        </div>
+        <div class="glance-item">
+          <div class="glance-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <div>
+            <div class="glance-card-label">Themes</div>
+            <div class="glance-card-value">Quantum Computing · AI · FinTech</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Program -->
-  <section id="program">
+  <!-- ══════════════════════════════════════════════════════
+       Section 4: Program Focus
+       ══════════════════════════════════════════════════════ -->
+  <section class="focus-section" id="program-focus">
     <div class="container">
-      <div class="section-label">Program</div>
-      <h2 class="section-title">Quantum Finance US Internship</h2>
-      <p class="section-intro">A 35-day immersive program in the Greater New York area (July 6 - August 9), combining lab visits, expert seminars, and industry networking across university research and finance communities.</p>
-      <div class="program-cards">
-        <div class="pcard">
-          <div class="pcard-icon"><svg viewBox="0 0 24 24"><path d="M9 3a4 4 0 0 0-4 4v1a4 4 0 0 0 0 8v1a4 4 0 0 0 7 2.65A4 4 0 0 0 19 17v-1a4 4 0 0 0 0-8V7a4 4 0 0 0-7-2.65A3.98 3.98 0 0 0 9 3Z"/><path d="M12 4v16"/><path d="M8 8h4"/><path d="M12 16h4"/></svg></div>
+      <div class="section-label">Program Focus</div>
+      <h2 class="section-title">Quantum Computing, AI & FinTech Exchange</h2>
+      <p class="focus-intro">Through academic visits, expert discussions, professional networking, and post-program reflection, students explore how emerging technologies connect with financial systems, research communities, and global innovation ecosystems.</p>
+      <div class="focus-grid">
+        <div class="focus-card">
+          <div class="focus-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
           <h3>Quantum Computing & AI Research Exposure</h3>
           <p>Exposure to hybrid quantum-classical computing, quantum algorithms, and AI research through academic visits, lab discussions, and technical briefings.</p>
         </div>
-        <div class="pcard">
-          <div class="pcard-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+        <div class="focus-card">
+          <div class="focus-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
           <h3>Financial Engineering Seminars</h3>
           <p>Seminars on financial engineering, quantitative finance, and AI in finance, including risk modeling, portfolio methods, and market applications.</p>
         </div>
-        <div class="pcard">
-          <div class="pcard-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.657 0 3-1.567 3-3.5S17.657 4 16 4s-3 1.567-3 3.5 1.343 3.5 3 3.5Z"/><path d="M8 11c1.657 0 3-1.567 3-3.5S9.657 4 8 4 5 5.567 5 7.5 6.343 11 8 11Z"/><path d="M2 20c.7-3 2.7-5 6-5s5.3 2 6 5"/><path d="M10 20c.7-3 2.7-5 6-5s5.3 2 6 5"/></svg></div>
+        <div class="focus-card">
+          <div class="focus-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
           <h3>Professional Networking</h3>
           <p>Professional exchange with industry practitioners, Taiwanese-American technology leaders, and community partners through TAITA East and related networks.</p>
         </div>
-        <div class="pcard">
-          <div class="pcard-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h6"/></svg></div>
+        <div class="focus-card">
+          <div class="focus-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
           <h3>Learning Outcomes</h3>
           <p>Participants develop reports, presentations, and follow-up sharing that reflect what they learned from research exposure, professional discussions, and site visits.</p>
         </div>
@@ -119,94 +144,328 @@
     </div>
   </section>
 
-  <!-- Schedule -->
-  <section id="schedule">
+  <!-- ══════════════════════════════════════════════════════
+       Section 5: Schedule Preview
+       ══════════════════════════════════════════════════════ -->
+  <section class="schedule-preview-section" id="schedule-preview">
+    <!-- Abstract Taiwan -> NY Route Map SVG -->
+    <div class="route-map-bg">
+      <div class="world-map-image"></div>
+    </div>
+
     <div class="container">
-      <div class="section-label">Schedule</div>
-      <h2 class="section-title">5-Week Itinerary</h2>
+      <div class="section-label">Schedule Preview</div>
+      <h2 class="section-title"><a href="schedule.html">5-Week Itinerary <span>&rarr;</span></a></h2>
+      <p class="section-subtitle">A five-week exchange program across academic, research, and professional communities in the Greater New York area.</p>
+
       <div class="timeline">
-        <div class="trow">
-          <div class="trow-week">Week 1</div>
-          <div class="trow-content">
-            <h4>Greater New York Research Orientation</h4>
-            <ul>
-              <li>Campus and research environment orientation</li>
-              <li>Financial Engineering & HQCC Lab visits (2 sessions)</li>
-              <li>HQCC thematic lectures and research exchanges (2 sessions)</li>
-              <li>NYC investment industry practice & expert roundtables (2 sessions)</li>
-            </ul>
-          </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-week">Week 1</div>
+          <div class="timeline-title">Research Orientation</div>
+          <div class="timeline-desc">Introduction to the research environment, academic visits, and initial discussions on financial engineering and hybrid quantum-classical computing.</div>
         </div>
-        <div class="trow">
-          <div class="trow-week">Week 2</div>
-          <div class="trow-content">
-            <h4>HQCC and Financial AI Workshop Week</h4>
-            <ul>
-              <li>In-depth HQCC × Finance thematic workshops (2 sessions)</li>
-              <li>Seminar with Financial AI researchers and professors</li>
-              <li>Group discussion and learning synthesis (2 sessions)</li>
-              <li>NYC investment industry practice & expert panels (2 sessions)</li>
-            </ul>
-          </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-week">Week 2</div>
+          <div class="timeline-title">HQCC & Financial AI Workshops</div>
+          <div class="timeline-desc">Workshops and seminars on hybrid quantum-classical computing, financial AI, and related research topics.</div>
         </div>
-        <div class="trow">
-          <div class="trow-week">Week 3</div>
-          <div class="trow-content">
-            <h4>Research and Industry Exchange</h4>
-            <ul>
-              <li>HQCC & Quantum AI technology lectures (2 sessions)</li>
-              <li>Advanced research training + industry/culture introduction (2 sessions)</li>
-              <li>Cross-campus student & faculty exchange activities (2 sessions)</li>
-              <li>NYC investment industry roundtable</li>
-            </ul>
-          </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-week">Week 3</div>
+          <div class="timeline-title">Research and Industry Exchange</div>
+          <div class="timeline-desc">Cross-campus academic exchange, technology lectures, and professional discussions with research and industry communities.</div>
         </div>
-        <div class="trow">
-          <div class="trow-week">Week 4</div>
-          <div class="trow-content">
-            <h4>Urban Finance and AI Residency</h4>
-            <ul>
-              <li>Urban university interdisciplinary lectures (2 sessions)</li>
-              <li>HQCC & AI Data Center applications symposium (2 sessions)</li>
-              <li>Industry expert visits arranged by international finance mentors (2 sessions)</li>
-              <li>NYC investment practice & expert roundtable</li>
-            </ul>
-          </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-week">Week 4</div>
+          <div class="timeline-title">Urban Finance and AI Residency</div>
+          <div class="timeline-desc">Interdisciplinary sessions connecting finance, AI, data systems, and urban university environments.</div>
         </div>
-        <div class="trow">
-          <div class="trow-week">Week 5</div>
-          <div class="trow-content">
-            <h4>Synthesis & Wrap-up</h4>
-            <ul>
-              <li>Individual results compilation and sharing (2 sessions)</li>
-              <li>Final group debriefs (2 sessions)</li>
-              <li>Post-program networking and follow-up connections</li>
-              <li>Return flight to Taiwan</li>
-            </ul>
-          </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-week">Week 5</div>
+          <div class="timeline-title">Synthesis & Reflection</div>
+          <div class="timeline-desc">Reflection, learning outcome preparation, final discussions, and post-program networking.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Partners -->
-  <section id="partners">
+  <!-- ══════════════════════════════════════════════════════
+       Section 6: Meet the Cohort Preview (Carousel)
+       ══════════════════════════════════════════════════════ -->
+  <section class="cohort-section" id="cohort">
     <div class="container">
-      <div class="section-label">Partners</div>
-      <h2 class="section-title">Our Industry Partner</h2>
-      <div class="partner-grid">
-        <div class="partner-card">
-          <div class="badge">Industry</div>
-          <h3>TAITA East Coast</h3>
-          <p>Taiwanese American Industrial Technology Association - East, a nonprofit bridging Taiwan's tech talent with US East Coast industry networks and innovation ecosystems.</p>
+      <div class="section-label">Cohort Preview</div>
+      <h2 class="section-title"><a href="people.html">Meet the Cohort <span>&rarr;</span></a></h2>
+      <p class="section-subtitle">A multidisciplinary group of Taiwanese students exploring quantum computing, AI, fintech, and quantitative finance.</p>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="cohort-track">
+
+        <!-- Albert Chiang (Last person placed first to create loop centering) -->
+        <div class="student-preview-card no-photo">
+          <div class="spc-body">
+            <div class="spc-monogram">AC</div>
+            <div class="spc-name">Albert Chiang</div>
+            <div class="spc-role">National Taiwan University, Civil Engineering / Finance</div>
+            <div class="spc-links">
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
         </div>
+
+        <!-- Alen Hsiao (Centered target) -->
+        <div class="student-preview-card has-photo" id="center-student">
+          <div class="spc-photo"><img src="img/Hsiao, Wei-Lun.jpg" alt="Alen Hsiao" /></div>
+          <div class="spc-body">
+            <div class="spc-name">Alen Hsiao</div>
+            <div class="spc-role">Computer Science Undergraduate, National Taiwan University</div>
+            <div class="spc-tags">
+              <span class="tag">ML</span>
+              <span class="tag">RL</span>
+              <span class="tag">Quantum Computing</span>
+              <span class="tag">FinTech</span>
+            </div>
+            <div class="spc-bio">Exploring the intersection of machine learning, reinforcement learning, quantum computing, and financial technology.</div>
+            <div class="spc-links">
+              <a href="https://www.linkedin.com/in/alen-hsiao/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charles Chiu -->
+        <div class="student-preview-card has-photo">
+          <div class="spc-photo"><img src="img/CharlesChiu.jpg" alt="Charles Chiu" /></div>
+          <div class="spc-body">
+            <div class="spc-name">Charles Chiu</div>
+            <div class="spc-role">Purdue University, Mechanical Engineering / Quantitative Trading</div>
+            <div class="spc-links">
+              <a href="https://www.linkedin.com/in/charles-chiu-a601b9210/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wayne Hsieh -->
+        <div class="student-preview-card no-photo">
+          <div class="spc-body">
+            <div class="spc-monogram">WH</div>
+            <div class="spc-name">Wayne Hsieh</div>
+            <div class="spc-role">National Taiwan University, International Business</div>
+            <div class="spc-links">
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jack Huang -->
+        <div class="student-preview-card no-photo">
+          <div class="spc-body">
+            <div class="spc-monogram">JH</div>
+            <div class="spc-name">Jack Huang</div>
+            <div class="spc-role">National Taiwan University, International Political Economy / KGI Securities Investment Advisory</div>
+            <div class="spc-links">
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ryan Liu -->
+        <div class="student-preview-card no-photo">
+          <div class="spc-body">
+            <div class="spc-monogram">RL</div>
+            <div class="spc-name">Ryan Liu</div>
+            <div class="spc-role">National Taiwan University, Information Management</div>
+            <div class="spc-links">
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zack Chiu -->
+        <div class="student-preview-card no-photo">
+          <div class="spc-body">
+            <div class="spc-monogram">ZC</div>
+            <div class="spc-name">Zack Chiu</div>
+            <div class="spc-role">National Cheng Kung University, Physics</div>
+            <div class="spc-links">
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oliver Lin -->
+        <div class="student-preview-card no-photo">
+          <div class="spc-body">
+            <div class="spc-monogram">OL</div>
+            <div class="spc-name">Oliver Lin</div>
+            <div class="spc-role">National Taiwan University, Computer Science MS</div>
+            <div class="spc-links">
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sara Ho -->
+        <div class="student-preview-card no-photo">
+          <div class="spc-body">
+            <div class="spc-monogram">SH</div>
+            <div class="spc-name">Sara Ho</div>
+            <div class="spc-role">National Tsing Hua University, Quantitative Finance MS</div>
+            <div class="spc-links">
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dennis Lin -->
+        <div class="student-preview-card no-photo">
+          <div class="spc-body">
+            <div class="spc-monogram">DL</div>
+            <div class="spc-name">Dennis Lin</div>
+            <div class="spc-role">National Taiwan University, Finance MS - Financial Engineering</div>
+            <div class="spc-links">
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ══════════════════════════════════════════════════════
+       Section 7: Academic Guidance & Professional Network
+       ══════════════════════════════════════════════════════ -->
+  <section class="advisors-section" id="advisors">
+    <div class="container">
+      <div class="section-label">Academic Guidance & Professional Network</div>
+      <h2 class="section-title">Advisors</h2>
+
+      <div class="advisors-grid">
+
+        <div class="advisor-card">
+          <div class="advisor-photo"><img src="img/cliffweng.jpg" alt="Cliff Weng" /></div>
+          <div class="advisor-info">
+            <div class="advisor-name">Cliff Weng</div>
+            <div class="advisor-role">Industry Advisor</div>
+            <div class="advisor-org">Paloma/Citadel/Numerix</div>
+            <a class="advisor-link" href="https://www.linkedin.com/in/cliffweng/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="advisor-card">
+          <div class="advisor-photo"><img src="img/SamuelChen.jpg" alt="Samuel Chen" /></div>
+          <div class="advisor-info">
+            <div class="advisor-name">Samuel Chen</div>
+            <div class="advisor-role">Academic Advisor</div>
+            <div class="advisor-org">Quantum AI Scientist</div>
+            <a class="advisor-link" href="https://www.linkedin.com/in/samuel-yen-chi-chen/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="advisor-card">
+          <div class="advisor-photo"><img src="img/Kuan-Tsae-Huang.jpg" alt="Kuan-Tsae Huang" /></div>
+          <div class="advisor-info">
+            <div class="advisor-name">Kuan-Tsae Huang</div>
+            <div class="advisor-role">Chief Advisor</div>
+            <div class="advisor-org">Chair, AI & Quantum, Asia University</div>
+            <a class="advisor-link" href="https://www.linkedin.com/in/kuan-tsae-huang-0a77788/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="advisor-card">
+          <div class="advisor-photo"><img src="img/elainechou.jpg" alt="Elaine Chou" /></div>
+          <div class="advisor-info">
+            <div class="advisor-name">Elaine Chou</div>
+            <div class="advisor-role">Industry Advisor</div>
+            <div class="advisor-org">Credit, AI</div>
+            <a class="advisor-link" href="https://www.linkedin.com/in/elaineschou/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="advisor-card">
+          <div class="advisor-photo"><img src="img/KunshanHuang.jpg" alt="Kunshan Huang" /></div>
+          <div class="advisor-info">
+            <div class="advisor-name">Kunshan Huang</div>
+            <div class="advisor-role">Industry Advisor</div>
+            <div class="advisor-org">Wall Street veteran</div>
+            <a class="advisor-link" href="https://www.linkedin.com/in/kunshan-huang-b61172/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="advisor-card">
+          <div class="advisor-info">
+            <div class="advisor-name">Frank Shih</div>
+            <div class="advisor-role">Academic Advisor</div>
+            <div class="advisor-org">Professor, NJIT</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Network -->
+  <section class="network-section" id="network">
+    <div class="container">
+      <div class="section-label">Professional Network</div>
+      <h2 class="section-title">Community Connection</h2>
+      <div class="network-card">
+        <div class="network-card-brand">
+          <h3>TAITA</h3>
+          <span>East Coast Chapter</span>
+        </div>
+        <p>Taiwanese American Industrial Technology Association – East is a Taiwanese-American professional network supporting technology, industry exchange, and community connections on the US East Coast.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       Section 8: Contact / Footer
+       ══════════════════════════════════════════════════════ -->
+  <section class="contact-section" id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <p>For academic exchange, professional networking, or collaboration inquiries, please contact us.</p>
+    <a href="mailto:contact@taiwanqfinhub.org" class="btn btn-outline-light">Contact Us</a>
+  </section>
+
   <footer>
-    <p>© 2025 Taiwan Q-Fin Hub | Supported by Taiwan Ministry of Education Youth Development Agency</p>
+    <strong>Taiwan Q-Fin Hub</strong> · Summer 2026 Greater New York Exchange<br>
+    Supported by Taiwan's Youth Development Administration, Ministry of Education
   </footer>
+
+  <!-- ── Scripts ── -->
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('menu-open');
+    });
+
+    // Center the initial cohort card on load
+    window.addEventListener('load', function() {
+      const centerStudent = document.getElementById('center-student');
+      const track = document.getElementById('cohort-track');
+      if (centerStudent && track) {
+        // Find exactly where the card should sit to be centered
+        const trackCenter = track.clientWidth / 2;
+        const cardCenter = centerStudent.offsetLeft + (centerStudent.offsetWidth / 2);
+        track.scrollLeft = cardCenter - trackCenter;
+      }
+    });
+  </script>
+
 </body>
 </html>
