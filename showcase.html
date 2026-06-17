@@ -4,20 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Showcase | Taiwan Q-Fin Hub</title>
-  <meta name="description" content="Research papers and projects by Taiwan Q-Fin Hub fellows in quantum finance and quantitative AI." />
+  <meta name="description" content="Research papers and projects by Taiwan Q-Fin Hub members in quantum finance and quantitative AI." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Lang Bar -->
-  <div id="lang-bar">
-    <button id="btn-en" onclick="setLang('en')">English</button>
-    <button id="btn-zh" onclick="setLang('zh')">中文</button>
-    <button id="btn-bi" class="active" onclick="setLang('bi')">EN/中</button>
-  </div>
 
   <!-- Nav -->
   <nav>
@@ -26,34 +19,24 @@
       <span>Taiwan Q-Fin Hub</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#program">Program</a></li>
-      <li><a href="index.html#schedule">Schedule</a></li>
-      <li><a href="index.html#partners">Partners</a></li>
-      <li><a href="index.html#eligibility">Eligibility</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="people.html">People</a></li>
       <li><a href="showcase.html" class="nav-active">Showcase</a></li>
-      <li><a href="index.html#cta">Apply</a></li>
     </ul>
   </nav>
 
   <!-- Page Hero -->
   <div class="page-hero">
-    <h1>Research Showcase <span class="zh">研究成果展示</span></h1>
-    <p class="en">Papers, projects, and reports produced by Taiwan Q-Fin Hub fellows in quantum finance, quantitative AI, and financial engineering.</p>
-    <p class="zh">台灣量子金融實驗室學員在量子金融、量化AI與金融工程領域的論文、專案與成果報告。</p>
+    <h1>Research Showcase</h1>
+    <p>Papers, projects, and reports produced by Taiwan Q-Fin Hub members in quantum finance, quantitative AI, and financial engineering.</p>
   </div>
 
   <!-- Papers & Projects -->
   <section id="showcase">
     <div class="container">
-      <div class="section-label">Papers & Projects / 論文與專案</div>
-      <h2 class="section-title">
-        Fellow Research Output
-        <span class="zh">學員研究成果</span>
-      </h2>
-      <p class="section-intro en">Each cohort fellow produces an English research report and presents at a domestic or international conference within one year of completing the program.</p>
-      <p class="section-intro zh" style="font-family:'Noto Sans TC',sans-serif; margin-top:.5rem;">每位學員須完成英文成果報告，並於結束計畫一年內在國內外研討會發表。</p>
+      <div class="section-label">Papers & Projects</div>
+      <h2 class="section-title">Fellow Research Output</h2>
+      <p class="section-intro">Research outputs include English reports and domestic or international conference presentations connected to the program's quantum finance themes.</p>
 
       <div class="showcase-grid">
 
@@ -61,13 +44,10 @@
         <div class="showcase-card">
           <span class="showcase-type">Paper</span>
           <div class="showcase-title">Quantum-Enhanced Portfolio Optimization via Hybrid Classical-Quantum Algorithms</div>
-          <div class="showcase-authors">Author Name · Taiwan Q-Fin Hub, Cohort 2025</div>
+          <div class="showcase-authors">Author Name · Taiwan Q-Fin Hub, 2025 Research Group</div>
           <div class="showcase-venue">Conference / Journal · 2025</div>
-          <div class="showcase-abstract en">
+          <div class="showcase-abstract">
             A placeholder abstract describing a study on applying hybrid quantum-classical computing (HQCC) to portfolio optimization problems, benchmarking against classical mean-variance approaches and demonstrating improvements in solution quality for high-dimensional asset universes.
-          </div>
-          <div class="showcase-abstract zh" style="font-family:'Noto Sans TC',sans-serif;">
-            本研究探討將混合量子古典計算（HQCC）應用於投資組合優化問題，與傳統均值-方差方法進行比較，並在高維度資產空間中展示解的品質提升。
           </div>
           <div class="showcase-tags">
             <span class="showcase-tag">Quantum Finance</span>
@@ -75,9 +55,9 @@
             <span class="showcase-tag">HQCC</span>
           </div>
           <div class="showcase-links">
-            <a class="showcase-link" href="#">📄 Paper</a>
-            <a class="showcase-link" href="#">💻 Code</a>
-            <a class="showcase-link" href="#">🖥 Slides</a>
+            <a class="showcase-link" href="#"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h6"/></svg>Paper</a>
+            <a class="showcase-link" href="#"><svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>Code</a>
+            <a class="showcase-link" href="#"><svg viewBox="0 0 24 24"><path d="M3 4h18v12H3z"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>Slides</a>
           </div>
         </div>
 
@@ -85,13 +65,10 @@
         <div class="showcase-card">
           <span class="showcase-type">Project</span>
           <div class="showcase-title">AI-Driven Risk Modeling in Emerging Market Fixed Income</div>
-          <div class="showcase-authors">Author Name · Taiwan Q-Fin Hub, Cohort 2025</div>
+          <div class="showcase-authors">Author Name · Taiwan Q-Fin Hub, 2025 Research Group</div>
           <div class="showcase-venue">Taiwan Q-Fin Hub Research Report · 2025</div>
-          <div class="showcase-abstract en">
-            A placeholder project report exploring the application of large language models and machine learning to credit risk modeling in emerging market fixed income, developed during the Fordham University residency week with mentorship from NYC industry experts.
-          </div>
-          <div class="showcase-abstract zh" style="font-family:'Noto Sans TC',sans-serif;">
-            本專案報告探討將大型語言模型與機器學習應用於新興市場固定收益的信用風險建模，於福坦謨大學駐點週在紐約業界專家輔導下完成。
+          <div class="showcase-abstract">
+            A placeholder project report exploring the application of large language models and machine learning to credit risk modeling in emerging market fixed income, developed during the urban finance residency week with mentorship from NYC industry experts.
           </div>
           <div class="showcase-tags">
             <span class="showcase-tag">AI / ML</span>
@@ -99,8 +76,8 @@
             <span class="showcase-tag">Fixed Income</span>
           </div>
           <div class="showcase-links">
-            <a class="showcase-link" href="#">📄 Report</a>
-            <a class="showcase-link" href="#">🖥 Slides</a>
+            <a class="showcase-link" href="#"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h6"/></svg>Report</a>
+            <a class="showcase-link" href="#"><svg viewBox="0 0 24 24"><path d="M3 4h18v12H3z"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>Slides</a>
           </div>
         </div>
 
@@ -108,13 +85,10 @@
         <div class="showcase-card">
           <span class="showcase-type">Paper</span>
           <div class="showcase-title">Variational Quantum Eigensolver Applications in Derivatives Pricing</div>
-          <div class="showcase-authors">Author Name · Taiwan Q-Fin Hub, Cohort 2025</div>
+          <div class="showcase-authors">Author Name · Taiwan Q-Fin Hub, 2025 Research Group</div>
           <div class="showcase-venue">Conference / Journal · 2025</div>
-          <div class="showcase-abstract en">
-            A placeholder abstract for a paper investigating variational quantum algorithms for pricing exotic derivatives, leveraging NJIT and Stony Brook HQCC lab infrastructure and collaborating with quantum computing researchers during the program residency.
-          </div>
-          <div class="showcase-abstract zh" style="font-family:'Noto Sans TC',sans-serif;">
-            本論文研究變分量子演算法在奇異衍生品定價中的應用，運用NJIT與石溪大學HQCC實驗室的設備，並於計畫駐點期間與量子計算研究者協作。
+          <div class="showcase-abstract">
+            A placeholder abstract for a paper investigating variational quantum algorithms for pricing exotic derivatives, leveraging university HQCC lab infrastructure and collaborating with quantum computing researchers during the program residency.
           </div>
           <div class="showcase-tags">
             <span class="showcase-tag">VQE</span>
@@ -122,8 +96,8 @@
             <span class="showcase-tag">Quantum Algorithms</span>
           </div>
           <div class="showcase-links">
-            <a class="showcase-link" href="#">📄 Paper</a>
-            <a class="showcase-link" href="#">💻 Code</a>
+            <a class="showcase-link" href="#"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h6"/></svg>Paper</a>
+            <a class="showcase-link" href="#"><svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>Code</a>
           </div>
         </div>
 
@@ -133,10 +107,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Taiwan Q-Fin Hub · 台灣量子金融實驗室 &nbsp;|&nbsp; Supported by Taiwan Ministry of Education Youth Development Agency</p>
-    <p style="margin-top:.4rem; font-family:'Noto Sans TC',sans-serif;">教育部青年發展署「青年百億海外圓夢基金計畫」支持</p>
+    <p>© 2025 Taiwan Q-Fin Hub | Supported by Taiwan Ministry of Education Youth Development Agency</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
