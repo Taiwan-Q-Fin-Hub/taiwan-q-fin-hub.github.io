@@ -264,21 +264,36 @@ nav {
   color: rgba(255,255,255,0.7);
   font-weight: 400;
 }
+.hero-theme-line {
+  margin-top: 0.65rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: 0.04em;
+}
 .hero-desc {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-size: 1rem;
-  color: rgba(255,255,255,0.58);
+  color: rgba(255,255,255,0.62);
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.75;
 }
 .hero-buttons {
-  margin-top: 2.5rem;
+  margin-top: 2.25rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+.hero .btn-primary {
+  background: var(--white);
+  color: var(--navy);
+}
+.hero .btn-primary:hover {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 6px 22px rgba(255,255,255,0.14);
 }
 
 /* ── Page Hero (sub-pages) ── */
@@ -337,43 +352,33 @@ nav {
   height: 280px;
 }
 
-/* ── Glance Strip ── */
-.glance-section {
-  background: var(--bg);
-  padding: 4rem 0;
-}
+/* ── About Info Strip ── */
 .glance-strip {
   display: flex;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
   margin-top: 2rem;
-  overflow: hidden;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 .glance-item {
-  flex: 1;
-  padding: 1.75rem 1.5rem;
-  border-right: 1px solid var(--border);
+  flex: 0 1 auto;
+  padding: 0;
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-.glance-item:last-child {
-  border-right: none;
+  gap: 0.7rem;
 }
 .glance-card-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: var(--teal-soft);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 .glance-card-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   fill: none;
   stroke: var(--teal);
   stroke-width: 2;
@@ -381,7 +386,7 @@ nav {
   stroke-linejoin: round;
 }
 .glance-card-label {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -389,70 +394,13 @@ nav {
   margin-bottom: 0.25rem;
 }
 .glance-card-value {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--navy);
   line-height: 1.4;
 }
 
-/* ── Program Focus ── */
-.focus-section {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-}
-.focus-intro {
-  margin-top: 1rem;
-  max-width: 680px;
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.75;
-}
-.focus-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-.focus-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-.focus-card:hover {
-  border-color: var(--teal);
-  box-shadow: 0 2px 12px rgba(0, 124, 137, 0.06);
-}
-.focus-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: var(--teal-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-}
-.focus-icon svg {
-  width: 22px;
-  height: 22px;
-  fill: none;
-  stroke: var(--teal);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.focus-card h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-.focus-card p {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
+
 
 /* ── Schedule Preview (Homepage) ── */
 .schedule-preview-section {
@@ -483,10 +431,6 @@ nav {
   background-size: cover;
   background-position: center 30%;
   opacity: 0.06;
-}
-.route-map-bg svg {
-  width: 100%;
-  height: 100%;
 }
 
 /* ── Vertical Timeline ── */
@@ -603,14 +547,23 @@ nav {
   width: 400px;
   height: 560px;
   flex-shrink: 0;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,250,252,0.98) 100%),
+    var(--white);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 22px 52px rgba(15, 23, 42, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   scroll-snap-align: center;
   color: var(--navy);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.student-preview-card:hover {
+  border-color: rgba(0, 124, 137, 0.4);
+  box-shadow: 0 26px 62px rgba(15, 23, 42, 0.14);
+  transform: translateY(-4px);
 }
 
 /* Card WITH Photo */
@@ -621,7 +574,8 @@ nav {
   overflow: hidden;
   flex-shrink: 0;
   margin: 2.5rem auto 1rem;
-  border: 4px solid var(--border-light);
+  border: 4px solid rgba(255, 255, 255, 0.86);
+  box-shadow: 0 16px 30px rgba(11, 31, 58, 0.16);
 }
 .student-preview-card.has-photo .spc-photo img {
   width: 100%;
@@ -651,7 +605,7 @@ nav {
   font-size: 3.5rem;
   font-weight: 300;
   color: var(--teal);
-  opacity: 0.15;
+  opacity: 0.24;
   line-height: 1;
   margin-bottom: 2rem;
   letter-spacing: -0.05em;
@@ -1187,9 +1141,6 @@ footer strong {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  .glance-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .focus-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1254,9 +1205,11 @@ footer strong {
   .hero-title {
     font-size: clamp(1.8rem, 6vw, 2.4rem);
   }
-
-  .glance-grid {
-    grid-template-columns: 1fr 1fr;
+  .glance-strip {
+    gap: 1.25rem;
+  }
+  .glance-item {
+    flex-basis: auto;
   }
   .focus-grid {
     grid-template-columns: 1fr;
@@ -1283,9 +1236,6 @@ footer strong {
 }
 
 @media (max-width: 480px) {
-  .glance-grid {
-    grid-template-columns: 1fr;
-  }
   .student-preview-card {
     width: 290px;
   }
