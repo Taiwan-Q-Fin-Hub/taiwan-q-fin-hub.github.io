@@ -141,19 +141,31 @@
   </section>
 
   <!-- ════════════════════════════════════════════════════════
-       Section 6: Student Cohort & Advisors (see people.html)
+       Section 6: People Teaser
        ════════════════════════════════════════════════════════ -->
-  <section class="cohort-section" id="cohort">
+  <section class="people-teaser-section" id="cohort">
     <div class="container">
-      <div class="section-label">Student Cohort</div>
-      <h2 class="section-title"><a href="people.html">Meet the Cohort <span>&rarr;</span></a></h2>
-      <p class="section-subtitle">10 students from Taiwan exploring quantum computing, AI, fintech, and quantitative finance in Greater New York — Summer 2026.</p>
-      <div class="cohort-avatars">
-        <img src="img/Hsiao, Wei-Lun.jpg" alt="Alen Hsiao" title="Alen Hsiao" />
-        <img src="img/CharlesChiu.jpg" alt="Charles Chiu" title="Charles Chiu" />
-        <span class="cohort-avatar-more">+8</span>
+      <div class="section-label">People</div>
+      <h2 class="section-title"><a href="people.html">Meet the Team <span>&rarr;</span></a></h2>
+      <div class="people-teaser-grid">
+
+        <div class="people-teaser-panel">
+          <div class="people-teaser-label">Student Cohort</div>
+          <p class="people-teaser-desc">10 students from Taiwan exploring quantum computing, AI, fintech, and quantitative finance in Greater New York.</p>
+          <div id="teaser-cohort-avatars"></div>
+          <a href="people.html#cohort" class="btn btn-outline" style="margin-top:1.75rem;">View All Members</a>
+        </div>
+
+        <div class="people-teaser-divider"></div>
+
+        <div class="people-teaser-panel">
+          <div class="people-teaser-label">Advisors</div>
+          <p class="people-teaser-desc">Academic and industry advisors spanning quantum AI, quantitative finance, and technology entrepreneurship.</p>
+          <div id="teaser-advisors-avatars"></div>
+          <a href="people.html#advisors" class="btn btn-outline" style="margin-top:1.75rem;">View All Advisors</a>
+        </div>
+
       </div>
-      <a href="people.html" class="btn btn-outline" style="margin-top:2rem;">View All Members</a>
     </div>
   </section>
 
@@ -172,61 +184,12 @@
   </footer>
 
   <!-- ── Scripts ── -->
+  <script src="data.js"></script>
   <script>
     document.querySelector('.nav-toggle').addEventListener('click', function() {
       document.querySelector('nav').classList.toggle('menu-open');
     });
-
-    // Create a seamless scroll ring for the cohort preview.
-    window.addEventListener('load', function() {
-      const centerStudent = document.getElementById('center-student');
-      const track = document.getElementById('cohort-track');
-      if (!track) return;
-
-      const originals = Array.from(track.querySelectorAll('.student-preview-card'));
-      const cloneCard = function(card) {
-        const clone = card.cloneNode(true);
-        clone.removeAttribute('id');
-        clone.setAttribute('aria-hidden', 'true');
-        clone.querySelectorAll('a').forEach(function(link) { link.tabIndex = -1; });
-        return clone;
-      };
-      originals.map(cloneCard).forEach(function(card) { track.appendChild(card); });
-      originals.map(cloneCard).forEach(function(card) { track.appendChild(card); });
-
-      const getSetWidth = function() {
-        const first = originals[0];
-        const last = originals[originals.length - 1];
-        const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0);
-        return (last.offsetLeft + last.offsetWidth - first.offsetLeft) + gap;
-      };
-
-      const centerOffset = function() {
-        if (!centerStudent) return 0;
-        const trackCenter = track.clientWidth / 2;
-        const cardCenter = centerStudent.offsetLeft + (centerStudent.offsetWidth / 2);
-        return cardCenter - trackCenter;
-      };
-
-      requestAnimationFrame(function() {
-        track.scrollLeft = getSetWidth() + centerOffset();
-      });
-
-      let ticking = false;
-      track.addEventListener('scroll', function() {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(function() {
-          const setWidth = getSetWidth();
-          if (track.scrollLeft >= setWidth * 2) {
-            track.scrollLeft -= setWidth;
-          } else if (track.scrollLeft <= 0) {
-            track.scrollLeft += setWidth;
-          }
-          ticking = false;
-        });
-      });
-    });
+    initPeopleTeaser('teaser-cohort-avatars', 'teaser-advisors-avatars');
   </script>
 
 </body>

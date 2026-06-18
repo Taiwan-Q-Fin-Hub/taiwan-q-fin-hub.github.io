@@ -702,36 +702,79 @@ nav {
 .cohort-action {
   padding: 0 2rem 0;
 }
+
+/* ── People Teaser (homepage two-panel) ── */
+.people-teaser-section {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+.people-teaser-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+.people-teaser-divider {
+  background: var(--border);
+  align-self: stretch;
+}
+.people-teaser-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  margin-bottom: 0.6rem;
+}
+.people-teaser-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  max-width: 420px;
+}
+
+/* ── Avatar strip (shared by teaser panels) ── */
 .cohort-avatars {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
 }
-.cohort-avatars img {
-  width: 52px;
-  height: 52px;
+.cohort-avatars img,
+.cohort-avatar-initials,
+.cohort-avatar-more {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  object-fit: cover;
   border: 2px solid var(--white);
   box-shadow: 0 2px 8px rgba(11,31,58,0.12);
+  flex-shrink: 0;
+}
+.cohort-avatars img {
+  object-fit: cover;
   margin-left: -10px;
+  display: block;
 }
 .cohort-avatars img:first-child { margin-left: 0; }
-.cohort-avatar-more {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--navy);
+.cohort-avatar-initials {
+  background: var(--navy-light);
   color: var(--white);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-left: -10px;
-  border: 2px solid var(--white);
-  flex-shrink: 0;
+}
+.cohort-avatar-more {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10px;
 }
 
 /* Grid layout for student-preview-cards on the people page */
@@ -1190,6 +1233,13 @@ footer strong {
    ================================================================ */
 
 @media (max-width: 1024px) {
+  .people-teaser-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .people-teaser-divider {
+    display: none;
+  }
   .about-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
