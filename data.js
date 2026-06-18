@@ -98,13 +98,6 @@ const ADVISORS = [
     linkedin: 'https://www.linkedin.com/in/samuel-yen-chi-chen/',
   },
   {
-    name: 'Kuan-Tsae Huang',
-    photo: 'img/Kuan-Tsae-Huang.jpg',
-    role: 'Chief Advisor',
-    org: 'Chair, AI &amp; Quantum, Asia University',
-    linkedin: 'https://www.linkedin.com/in/kuan-tsae-huang-0a77788/',
-  },
-  {
     name: 'Elaine Chou',
     photo: 'img/elainechou.jpg',
     role: 'Industry Advisor',
@@ -124,6 +117,13 @@ const ADVISORS = [
     role: 'Industry Advisor',
     org: 'CEO, Paramita Capital',
     linkedin: 'https://www.linkedin.com/in/tradeoflife/',
+  },
+  {
+    name: 'Kuan-Tsae Huang',
+    photo: 'img/Kuan-Tsae-Huang.jpg',
+    role: 'Chief Advisor',
+    org: 'Chair, AI &amp; Quantum, Asia University',
+    linkedin: 'https://www.linkedin.com/in/kuan-tsae-huang-0a77788/',
   },
   {
     name: 'Frank Shih',
