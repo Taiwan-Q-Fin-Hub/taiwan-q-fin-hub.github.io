@@ -702,6 +702,37 @@ nav {
 .cohort-action {
   padding: 0 2rem 0;
 }
+.cohort-avatars {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.cohort-avatars img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--white);
+  box-shadow: 0 2px 8px rgba(11,31,58,0.12);
+  margin-left: -10px;
+}
+.cohort-avatars img:first-child { margin-left: 0; }
+.cohort-avatar-more {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10px;
+  border: 2px solid var(--white);
+  flex-shrink: 0;
+}
 
 /* Grid layout for student-preview-cards on the people page */
 .students-card-grid {
