@@ -125,11 +125,6 @@ const ADVISORS = [
     org: 'Chair, AI &amp; Quantum, Asia University',
     linkedin: 'https://www.linkedin.com/in/kuan-tsae-huang-0a77788/',
   },
-  {
-    name: 'Frank Shih',
-    role: 'Academic Advisor',
-    org: 'Professor, NJIT',
-  },
 ];
 
 /* ── Render helpers ─────────────────────────────────────── */
@@ -186,6 +181,69 @@ function _avatarStrip(people, max) {
   return `<div class="cohort-avatars">${items}${more}</div>`;
 }
 
+const SPEAKERS = [
+  {
+    monogram: 'SC',
+    name: 'Su Chun-huai 蘇春槐',
+    nameUrl: 'https://www.threads.com/@nancywu88tw/post/DZu3l4ZgTtI',
+    desc: 'Presidential Advisor 總統府資政. <a href="https://zh.wikipedia.org/wiki/%E5%93%A5%E5%80%AB%E6%AF%94%E4%BA%9E%E5%A4%A7%E5%AD%B8" target="_blank" rel="noopener">哥倫比亞大學</a>數理統計研究所博士',
+  },
+  {
+    photo: 'img/KunshanHuang.jpg',
+    name: 'Kunshan Huang 黃崑山',
+    nameUrl: 'https://www.linkedin.com/in/kunshan-huang-b61172/',
+    desc: 'HSBC, Barclays, Duetsche Bank, JP Morgan, NYU Stern, Columbia Engineering. 清華電機',
+  },
+  {
+    photo: 'img/clarkhsu.jpg',
+    name: 'Clark Hsu',
+    nameUrl: 'https://www.linkedin.com/in/tradeoflife/',
+    desc: 'Founder&amp;CEO <a href="https://www.paramitacapital.com/page_team.html" target="_blank" rel="noopener">@Paramita</a>. Fixed Income PM, Prop Trader, CMU dual Computational Finance/MBA, 交大電機',
+  },
+  {
+    monogram: 'VL',
+    name: 'Vincent Lu 呂文森',
+    nameUrl: 'https://www.linkedin.com/in/wslu42/',
+    desc: 'PsiQuantum, Founding engineer@Atlantic Quantum, IBM Quantum Physicist. Rutgers PhD 台大物理',
+  },
+  {
+    photo: 'img/SamuelChen.jpg',
+    name: 'Samuel Chen',
+    nameUrl: 'https://www.linkedin.com/in/samuel-yen-chi-chen/',
+    desc: 'Quantum AI + ML. MD-PhD, top researcher. 台大醫科, 台大物理學士博士. <a href="https://share.google/aimode/8eAQR4miKcmtLFMkV" target="_blank" rel="noopener">AI對陳彥奇博士的介紹</a>',
+  },
+  {
+    monogram: 'TY',
+    name: 'Tony Yau 姚正邦',
+    nameUrl: 'https://www.linkedin.com/in/psalm23jc/',
+    desc: ' Quantum Computing@IBM Watson, Princeton PhD, 清華電機',
+  },
+  {
+    monogram: 'YS',
+    name: 'Yue Sun',
+    nameUrl: 'https://www.linkedin.com/in/yue-sun/',
+    desc: 'Quantum Computing@JPM. Northwestern PhD. 南京大學',
+  },
+  {
+    photo: 'img/michaelhuang.jpg',
+    name: 'Michael Huang',
+    nameUrl: 'https://www.linkedin.com/in/mhuang-cfa/',
+    desc: 'Chief Strategy Officer@Chimera Investment, MetLife, Avenue One, Fortress, Carrington Capital. Cornell Engineering. CFA',
+  },
+  {
+    photo: 'img/elainechou.jpg',
+    name: 'Elaine Chou',
+    nameUrl: 'https://www.linkedin.com/in/elaineschou/',
+    desc: 'MEAG (€371B) - AI, Liquid Credit. Genworth ($100B) - Investment manager, structured credit trader. S&amp;P. Columbia B-School, NYU Law. 台大法律. Licensed lawyer in both NYS and Taiwan. CFA.',
+  },
+  {
+    photo: 'img/cliffweng.jpg',
+    name: 'Cliff Weng',
+    nameUrl: 'https://www.linkedin.com/in/cliffweng/',
+    desc: '2xentrepreneur. Numerix, Polypaths, Citadel, Paloma. NYU Courant. 台大資工',
+  },
+];
+
 /* ── Public init functions ──────────────────────────────── */
 function initStudentGrid(id) {
   const el = document.getElementById(id);
@@ -195,6 +253,24 @@ function initStudentGrid(id) {
 function initAdvisorsGrid(id) {
   const el = document.getElementById(id);
   if (el) el.innerHTML = ADVISORS.map(advisorCard).join('');
+}
+
+function speakerCard(s) {
+  const avatar = s.photo
+    ? `<div class="advisor-photo"><img src="${s.photo}" alt="${s.name}" /></div>`
+    : `<div class="advisor-photo" style="display:flex;align-items:center;justify-content:center;background:var(--navy);color:var(--white);font-weight:700;font-size:1.1rem;letter-spacing:0;">${s.monogram}</div>`;
+  return `<div class="advisor-card">
+  ${avatar}
+  <div class="advisor-info">
+    <div class="advisor-name"><a href="${s.nameUrl}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">${s.name}</a></div>
+    <div class="advisor-org" style="margin-top:0.35rem;">${s.desc}</div>
+  </div>
+</div>`;
+}
+
+function initSpeakersGrid(id) {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = SPEAKERS.map(speakerCard).join('');
 }
 
 function initPeopleTeaser(cohortAvatarsId, advisorAvatarsId) {

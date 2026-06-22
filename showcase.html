@@ -22,7 +22,6 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="people.html">People</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
         <li><a href="showcase.html" class="nav-active">Showcase</a></li>
       </ul>
       <a href="mailto:contact@taiwanqfinhub.org" class="nav-contact">Contact</a>
@@ -39,91 +38,210 @@
   <!-- ========== PAPERS & PROJECTS ========== -->
   <section class="showcase-section">
     <div class="container">
-      <div class="section-label">Papers &amp; Projects</div>
-      <h2 class="section-title">Fellow Research Output</h2>
-      <p class="section-subtitle">Research outputs include English reports and domestic or international conference presentations connected to the program's quantum finance themes.</p>
+      <div class="section-label">Project Ideas</div>
+      <h2 class="section-title">2026 Project Ideas</h2>
+      <p class="section-subtitle">Proposed projects for the 2026 cohort — spanning quantitative finance, quantum computing, and AI/ML engineering. Topics are open for fellows to explore and build during the program.</p>
 
       <div class="filter-tabs">
         <button class="filter-tab active">All</button>
-        <button class="filter-tab">Papers</button>
-        <button class="filter-tab">Projects</button>
+        <button class="filter-tab">Quantum</button>
+        <button class="filter-tab">AI / ML</button>
+        <button class="filter-tab">Quant Finance</button>
       </div>
 
       <div class="showcase-grid">
 
         <!-- Card 1 -->
-        <div class="showcase-card">
-          <span class="showcase-type">Paper</span>
-          <span class="showcase-status">Placeholder</span>
-          <h3 class="showcase-title">Quantum-Enhanced Portfolio Optimization via Hybrid Classical-Quantum Algorithms</h3>
-          <p class="showcase-authors">Author Name · Taiwan Q-Fin Hub, 2025 Research Group</p>
-          <p class="showcase-venue">Conference / Journal · 2025</p>
-          <p class="showcase-abstract">A placeholder abstract describing a study on applying hybrid quantum-classical computing (HQCC) to portfolio optimization problems, benchmarking against classical mean-variance approaches and demonstrating improvements in solution quality for high-dimensional asset universes.</p>
+        <div class="showcase-card" data-type="Project">
+          <span class="showcase-type">Project</span>
+          <span class="showcase-status">Streamlit</span>
+          <h3 class="showcase-title">Financial Engineering with QuantLib</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Interactive Application · 2026</p>
+          <p class="showcase-abstract">An interactive educational app built with QuantLib that demonstrates how to price common financial instruments (bonds, options, interest rate swaps, FX forwards, etc.), visualise their sensitivities, and understand the mathematics behind them — all in a live, parameter-driven UI.</p>
           <div class="showcase-tags">
-            <span class="tag">Quantum Finance</span>
-            <span class="tag">Portfolio Optimization</span>
-            <span class="tag">HQCC</span>
+            <span class="tag">QuantLib</span>
+            <span class="tag">Fixed Income</span>
+            <span class="tag">Derivatives</span>
+            <span class="tag">Streamlit</span>
           </div>
           <div class="showcase-links">
-            <a href="#" class="showcase-link">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h6"/></svg>
-              Paper
-            </a>
-            <a href="#" class="showcase-link">
+            <a href="https://fe-quantlib.streamlit.app/" target="_blank" rel="noopener" class="showcase-link">
               <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
               Code
-            </a>
-            <a href="#" class="showcase-link">
-              <svg viewBox="0 0 24 24"><path d="M3 4h18v12H3z"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>
-              Slides
             </a>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="showcase-card">
+        <div class="showcase-card" data-type="Project">
           <span class="showcase-type">Project</span>
-          <span class="showcase-status">Placeholder</span>
-          <h3 class="showcase-title">AI-Driven Risk Modeling in Emerging Market Fixed Income</h3>
-          <p class="showcase-authors">Author Name · Taiwan Q-Fin Hub, 2025 Research Group</p>
-          <p class="showcase-venue">Taiwan Q-Fin Hub Research Report · 2025</p>
-          <p class="showcase-abstract">A placeholder project report exploring the application of large language models and machine learning to credit risk modeling in emerging market fixed income, developed during the urban finance residency week with mentorship from NYC industry experts.</p>
+          <span class="showcase-status">Streamlit</span>
+          <h3 class="showcase-title">Quant Research with Factor Models</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Interactive Application · 2026</p>
+          <p class="showcase-abstract">An interactive app that demonstrates how a quant research team investigates equity factor models — from raw price data through to backtested long-short portfolios. Designed to be modular and pluggable so new factors can be added without touching the app layer.</p>
           <div class="showcase-tags">
-            <span class="tag">AI / ML</span>
-            <span class="tag">Credit Risk</span>
-            <span class="tag">Fixed Income</span>
+            <span class="tag">Factor Models</span>
+            <span class="tag">Equity</span>
+            <span class="tag">Backtesting</span>
+            <span class="tag">Streamlit</span>
           </div>
           <div class="showcase-links">
-            <a href="#" class="showcase-link">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h6"/></svg>
-              Report
-            </a>
-            <a href="#" class="showcase-link">
-              <svg viewBox="0 0 24 24"><path d="M3 4h18v12H3z"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>
-              Slides
+            <a href="https://factor-model.streamlit.app/" target="_blank" rel="noopener" class="showcase-link">
+              <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              Code
             </a>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="showcase-card">
-          <span class="showcase-type">Paper</span>
-          <span class="showcase-status">Placeholder</span>
-          <h3 class="showcase-title">Variational Quantum Eigensolver Applications in Derivatives Pricing</h3>
-          <p class="showcase-authors">Author Name · Taiwan Q-Fin Hub, 2025 Research Group</p>
-          <p class="showcase-venue">Conference / Journal · 2025</p>
-          <p class="showcase-abstract">A placeholder abstract for a paper investigating variational quantum algorithms for pricing exotic derivatives, leveraging university HQCC lab infrastructure and collaborating with quantum computing researchers during the program residency.</p>
+        <div class="showcase-card" data-type="Project">
+          <span class="showcase-type">Project</span>
+          <span class="showcase-status">Streamlit</span>
+          <h3 class="showcase-title">Quantum Monte Carlo &amp; Option Pricing</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Interactive Application · 2026</p>
+          <p class="showcase-abstract">An interactive application comparing Classical Monte Carlo methods with Quantum Amplitude Estimation (QAE) for financial derivatives pricing. Covers European and American options, binomial trees, Least-Squares Monte Carlo, and quantum backward induction.</p>
           <div class="showcase-tags">
-            <span class="tag">VQE</span>
-            <span class="tag">Derivatives</span>
-            <span class="tag">Quantum Algorithms</span>
+            <span class="tag">Quantum Computing</span>
+            <span class="tag">Monte Carlo</span>
+            <span class="tag">Options Pricing</span>
+            <span class="tag">QAE</span>
+          </div>
+          <div class="showcase-links">
+            <a href="https://quantum-monte-carlo.streamlit.app/" target="_blank" rel="noopener" class="showcase-link">
+              <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="showcase-card" data-type="Project">
+          <span class="showcase-type">Project</span>
+          <span class="showcase-status">Streamlit</span>
+          <h3 class="showcase-title">WorldQuant 101 Alpha Trading &amp; Backtesting System</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Interactive Application · 2026</p>
+          <p class="showcase-abstract">An application for researching, composing, and backtesting quantitative trading signals based on the 101 Formulaic Alphas paper by Zura Kakushadze (2016). Signals can be exported as QuantConnect LEAN algorithm files for live/paper trading.</p>
+          <div class="showcase-tags">
+            <span class="tag">Alpha Research</span>
+            <span class="tag">Backtesting</span>
+            <span class="tag">QuantConnect</span>
+            <span class="tag">Streamlit</span>
+          </div>
+          <div class="showcase-links">
+            <a href="https://alpha101.streamlit.app/" target="_blank" rel="noopener" class="showcase-link">
+              <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="showcase-card" data-type="Project">
+          <span class="showcase-type">Project</span>
+          <span class="showcase-status">Research Tool</span>
+          <h3 class="showcase-title">Network-Aware Portfolio Risk Engine</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Research Tool · 2026</p>
+          <p class="showcase-abstract">A quantitative research tool that uncovers hidden concentration risk between S&amp;P 500 stocks using network science — going beyond naïve price correlation by modelling common institutional ownership as the true contagion channel.</p>
+          <div class="showcase-tags">
+            <span class="tag">Network Science</span>
+            <span class="tag">Risk Management</span>
+            <span class="tag">S&amp;P 500</span>
           </div>
           <div class="showcase-links">
             <a href="#" class="showcase-link">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h6"/></svg>
-              Paper
+              <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              Code
             </a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="showcase-card" data-type="Project">
+          <span class="showcase-type">Project</span>
+          <span class="showcase-status">Streamlit</span>
+          <h3 class="showcase-title">Sector Rotation Strategies</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Interactive Application · 2026</p>
+          <p class="showcase-abstract">An app demonstrating a momentum-based sector rotation strategy using popular sector ETFs. The strategy dynamically allocates capital among the top-performing sectors, rebalancing monthly based on recent momentum. Users can configure the lookback period and the number of ETFs to hold.</p>
+          <div class="showcase-tags">
+            <span class="tag">Momentum</span>
+            <span class="tag">Sector ETFs</span>
+            <span class="tag">Asset Allocation</span>
+            <span class="tag">Streamlit</span>
+          </div>
+          <div class="showcase-links">
+            <a href="https://sector-rotation-analysis.streamlit.app/" target="_blank" rel="noopener" class="showcase-link">
+              <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="showcase-card" data-type="Project">
+          <span class="showcase-type">Project</span>
+          <span class="showcase-status">Python</span>
+          <h3 class="showcase-title">Build Your Own Backtesting Platform</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Platform Build · 2026</p>
+          <p class="showcase-abstract">A single-ticker backtesting engine that fetches real historical data via Yahoo Finance and lets you test 10 different trading strategies with full trade logging, tax-aware P&amp;L, and visual charting.</p>
+          <div class="showcase-tags">
+            <span class="tag">Backtesting</span>
+            <span class="tag">Yahoo Finance</span>
+            <span class="tag">Trading Strategies</span>
+            <span class="tag">P&amp;L Analysis</span>
+          </div>
+          <div class="showcase-links">
             <a href="#" class="showcase-link">
+              <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="showcase-card" data-type="Project">
+          <span class="showcase-type">Project</span>
+          <span class="showcase-status">GitHub</span>
+          <h3 class="showcase-title">Distributed Processing Dashboard</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Full-Stack Application · 2026</p>
+          <p class="showcase-abstract">A real-time distributed processing visualizer built on Dask, FastAPI, and React. Spawn worker nodes from a browser dashboard, choose a task mode, hit Run, and watch the cluster animate — with live throughput, round-trip time, and overhead stats updating at 10 Hz.</p>
+          <div class="showcase-tags">
+            <span class="tag">Dask</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">Distributed Systems</span>
+          </div>
+          <div class="showcase-links">
+            <a href="https://github.com/cliffweng/DP" target="_blank" rel="noopener" class="showcase-link">
+              <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="showcase-card" data-type="Project">
+          <span class="showcase-type">Project</span>
+          <span class="showcase-status">Vercel</span>
+          <h3 class="showcase-title">Agentic Workflow Visualizer</h3>
+          <p class="showcase-authors">Mentor: Cliff Weng · Taiwan Q-Fin Hub, 2026</p>
+          <p class="showcase-venue">Full-Stack Application · 2026</p>
+          <p class="showcase-abstract">A full-stack visualization of multi-agent AI systems across 11 high-impact industries. Agents run in real time, collaborate via shared memory, execute in parallel, call live public APIs (Yahoo Finance), loop for self-correction, and pause for human approval — all streamed to a React Flow diagram and live output panel.</p>
+          <div class="showcase-tags">
+            <span class="tag">Agentic AI</span>
+            <span class="tag">React Flow</span>
+            <span class="tag">Multi-Agent</span>
+            <span class="tag">LLM</span>
+          </div>
+          <div class="showcase-links">
+            <a href="https://10-agentic-workflows.vercel.app/" target="_blank" rel="noopener" class="showcase-link">
               <svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
               Code
             </a>
@@ -134,22 +252,6 @@
     </div>
   </section>
 
-  <!-- ========== EXCHANGE GALLERY ========== -->
-  <section class="gallery-section">
-    <div class="container">
-      <div class="section-label">Gallery</div>
-      <h2 class="section-title">Exchange Gallery</h2>
-      <p class="section-subtitle">Selected images from Greater New York and related exchange settings.</p>
-
-      <div class="gallery-grid">
-        <img src="img/NY5.jpg" alt="Financial District" />
-        <img src="img/NY2.avif" alt="Manhattan Skyline" />
-        <img src="img/ny.jpg" alt="New York City" />
-        <img src="img/ny2.jpg" alt="Greater New York" />
-        <img src="img/quantum machine.jpg" alt="Quantum Hardware" />
-      </div>
-    </div>
-  </section>
 
   <!-- ========== FOOTER ========== -->
   <footer>
