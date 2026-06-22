@@ -169,8 +169,21 @@
   </section>
 
   <!-- ══════════════════════════════════════════════════════
-       Section 7: Contact / Footer
+       Section 7: Speaker Series
        ══════════════════════════════════════════════════════ -->
+  <section class="advisors-section" id="speakers" style="background:var(--white);">
+    <div class="container">
+      <span class="section-label">Speaker Series</span>
+      <h2 class="section-title">Meet the Speakers</h2>
+      <p class="section-subtitle" style="margin-bottom:0;">Practitioners and researchers presenting at the 2026 Taiwan Q-Fin Hub exchange — in order of appearance.</p>
+
+      <div class="advisors-grid" id="speakers-grid"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       Section 8: Contact / Footer
+       ════════════════════════════════════════════════════════ -->
   <section class="contact-section" id="contact">
     <h2 class="section-title">Get in Touch</h2>
     <p>For academic exchange, professional networking, or collaboration inquiries, please contact us.</p>
@@ -189,6 +202,7 @@
       document.querySelector('nav').classList.toggle('menu-open');
     });
     initPeopleTeaser('teaser-cohort-avatars', 'teaser-advisors-avatars');
+    initSpeakersGrid('speakers-grid');
   </script>
 
 </body>
