@@ -225,6 +225,12 @@ const SPEAKERS = [
     desc: 'Quantum Computing@JPM. Northwestern PhD. 南京大學',
   },
   {
+    photo: 'img/EricYeh.jpg',
+    name: 'Eric Yeh',
+    nameUrl: 'https://www.linkedin.com/in/ericgyeh/',
+    desc: 'CIO@Coastal Management, PM@AllianceBernstein, PM@Tower Research, Trader@Duetsche Bank, Quant/Risk@Morgan Stanley. Harvard University',
+  },
+  {
     photo: 'img/michaelhuang.jpg',
     name: 'Michael Huang',
     nameUrl: 'https://www.linkedin.com/in/mhuang-cfa/',
