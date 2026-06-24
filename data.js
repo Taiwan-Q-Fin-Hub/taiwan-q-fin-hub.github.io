@@ -240,13 +240,19 @@ const SPEAKERS = [
     photo: 'img/elainechou.jpg',
     name: 'Elaine Chou',
     nameUrl: 'https://www.linkedin.com/in/elaineschou/',
-    desc: 'MEAG (€371B) - AI, Liquid Credit. Genworth ($100B) - Investment manager, structured credit trader. S&amp;P. Columbia B-School, NYU Law. 台大法律. Licensed lawyer in both NYS and Taiwan. CFA.',
+    desc: 'MEAG (€371B) - AI, Liquid Credit. Genworth ($100B) - Investment/structured credit trader. S&amp;P. Columbia MBA, NYU Law. 台大法律. Licensed lawyer in NYS/Taiwan. CFA.',
   },
   {
     photo: 'img/cliffweng.jpg',
     name: 'Cliff Weng',
     nameUrl: 'https://www.linkedin.com/in/cliffweng/',
     desc: '2xentrepreneur. Numerix, Polypaths, Citadel, Paloma. NYU Courant. 台大資工',
+  },
+  {
+    photo: 'img/Haiwen.jpg',
+    name: 'Haiwen Hsu 許海雯',
+    nameUrl: 'https://www.linkedin.com/in/haiwen-hsu-cfa-%09-%E8%A8%B1%E6%B5%B7%E9%9B%AF-2aab655/',
+    desc: 'Head of Treasury@ CTBC Bank, Head of Fixed Income@台灣人壽, Fixed Income Global COO@Credit Suisse, Freddie Mac, GW MBA, CFA 台大商管',
   },
 ];
 
