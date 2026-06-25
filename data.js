@@ -207,6 +207,12 @@ const SPEAKERS = [
     desc: 'PsiQuantum, Founding engineer@Atlantic Quantum, IBM Quantum Physicist. Rutgers PhD 台大物理',
   },
   {
+    photo: 'img/StephenChun.jpg',
+    name: 'Stephen Chun',
+    nameUrl: 'https://www.linkedin.com/in/stephen-chung-56b14522/',
+    desc: 'Principal@SAS Quant Solution, Director/PM@WorldQuant, Graham Capital, UBS, Theoretical Particle Physics PhD Cornell, 清華',
+  },
+  {
     photo: 'img/SamuelChen.jpg',
     name: 'Samuel Chen',
     nameUrl: 'https://www.linkedin.com/in/samuel-yen-chi-chen/',
