@@ -210,7 +210,7 @@ const SPEAKERS = [
     photo: 'img/StephenChun.jpg',
     name: 'Stephen Chun',
     nameUrl: 'https://www.linkedin.com/in/stephen-chung-56b14522/',
-    desc: 'Principal@SAS Quant Solution, Director/PM@WorldQuant, Graham Capital, UBS, Theoretical Particle Physics PhD Cornell, 清華',
+    desc: 'CIO@SAB Family Trading, Data Scientist@SAS; PMs@WorldQuant, Graham Capital, Nomura, UBS; Quant@Morgan Stanley; Physicist, PhD Cornell, 清華',
   },
   {
     photo: 'img/SamuelChen.jpg',
