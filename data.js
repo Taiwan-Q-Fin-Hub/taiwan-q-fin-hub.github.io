@@ -252,7 +252,7 @@ const SPEAKERS = [
     photo: 'img/cliffweng.jpg',
     name: 'Cliff Weng',
     nameUrl: 'https://www.linkedin.com/in/cliffweng/',
-    desc: '2xentrepreneur. Numerix, Polypaths, Citadel, Paloma. NYU Courant. 台大資工',
+    desc: '2 x Entrepreneur. Numerix, Polypaths, Citadel, Paloma. NYU Courant. 台大資工',
   },
   {
     photo: 'img/Haiwen.jpg',
