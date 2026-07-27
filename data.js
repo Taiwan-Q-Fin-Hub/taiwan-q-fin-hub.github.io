@@ -47,7 +47,7 @@ const COHORT = [
   },
   {
     name: 'Oliver Lin',
-    photo: 'img/OliverLin,jpg',
+    photo: 'img/OliverLin.jpg',
     role: 'National Taiwan University, Computer Science MS',
     linkedin: 'https://www.linkedin.com/in/%E5%B8%AD%E8%91%A6-%E6%9E%97-918621222/',
     twitter: '#',
