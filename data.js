@@ -28,7 +28,7 @@ const COHORT = [
     name: 'Albert Chiang',
     monogram: 'AC',
     role: 'National Taiwan University, Civil Engineering / Finance',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/shangcheng-chiang-b8568839b/',
     twitter: '#',
   },
   {
