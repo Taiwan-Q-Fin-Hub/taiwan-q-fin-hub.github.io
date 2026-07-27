@@ -35,7 +35,7 @@ const COHORT = [
     name: 'Dennis Lin',
     monogram: 'DL',
     role: 'National Taiwan University, Finance MS - Financial Engineering',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/yunhao0',
     twitter: '#',
   },
   {
@@ -70,7 +70,7 @@ const COHORT = [
     name: 'Wayne Hsieh',
     monogram: 'WH',
     role: 'National Taiwan University, International Business',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/yuwei-hsieh-759486344',
     twitter: '#',
   },
   {
