@@ -40,14 +40,14 @@ const COHORT = [
   },
   {
     name: 'Jack Huang',
-    monogram: 'JH',
+    photo: 'img/JackHuang.jpg',
     role: 'National Taiwan University, International Political Economy / KGI Securities Investment Advisory',
     linkedin: 'https://www.linkedin.com/in/%E6%99%89%E6%8F%9A-%E9%BB%83-69bb89290/',
     twitter: '#',
   },
   {
     name: 'Oliver Lin',
-    monogram: 'OL',
+    photo: 'img/OliverLin,jpg',
     role: 'National Taiwan University, Computer Science MS',
     linkedin: 'https://www.linkedin.com/in/%E5%B8%AD%E8%91%A6-%E6%9E%97-918621222/',
     twitter: '#',
