@@ -42,7 +42,7 @@ const COHORT = [
     name: 'Jack Huang',
     monogram: 'JH',
     role: 'National Taiwan University, International Political Economy / KGI Securities Investment Advisory',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/%E6%99%89%E6%8F%9A-%E9%BB%83-69bb89290/',
     twitter: '#',
   },
   {
@@ -63,7 +63,7 @@ const COHORT = [
     name: 'Sara Ho',
     monogram: 'SH',
     role: 'National Tsing Hua University, Quantitative Finance MS',
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/in/sara-ho-21b572292/',
     twitter: '#',
   },
   {
