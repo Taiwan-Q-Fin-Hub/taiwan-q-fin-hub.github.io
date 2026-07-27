@@ -26,14 +26,14 @@ const COHORT = [
   },
   {
     name: 'Albert Chiang',
-    monogram: 'AC',
+    photo: 'img/Albert.jpg',
     role: 'National Taiwan University, Civil Engineering / Finance',
     linkedin: 'https://www.linkedin.com/in/shangcheng-chiang-b8568839b/',
     twitter: '#',
   },
   {
     name: 'Dennis Lin',
-    monogram: 'DL',
+    photo: 'img/Dennis.jpg',
     role: 'National Taiwan University, Finance MS - Financial Engineering',
     linkedin: 'https://www.linkedin.com/in/yunhao0',
     twitter: '#',
