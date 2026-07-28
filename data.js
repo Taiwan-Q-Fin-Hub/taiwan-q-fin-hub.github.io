@@ -54,7 +54,7 @@ const COHORT = [
   },
   {
     name: 'Ryan Liu',
-    monogram: 'RL',
+    photo: 'img/Ryan.jpg',
     role: 'National Taiwan University, Information Management',
     linkedin: '#',
     twitter: '#',
@@ -68,14 +68,14 @@ const COHORT = [
   },
   {
     name: 'Wayne Hsieh',
-    monogram: 'WH',
+    photo: 'img/Wayne.jpg',
     role: 'National Taiwan University, International Business',
     linkedin: 'https://www.linkedin.com/in/yuwei-hsieh-759486344',
     twitter: '#',
   },
   {
     name: 'Zack Chiu',
-    monogram: 'ZC',
+    photo: 'img/Zack.jpg',
     role: 'National Cheng Kung University, Physics',
     linkedin: '#',
     twitter: '#',
