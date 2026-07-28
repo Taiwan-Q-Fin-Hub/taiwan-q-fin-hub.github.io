@@ -11,15 +11,17 @@ const COHORT = [
   {
     name: 'Alen Hsiao',
     photo: 'img/Hsiao, Wei-Lun.jpg',
+    accent: ['#789095', '#344556'],
     role: 'Computer Science Undergraduate, National Taiwan University',
     tags: ['ML', 'RL', 'Quantum Computing', 'FinTech'],
     bio: 'ICPC Taichung Regional Gold Medalist. Exploring ML, RL, quantum computing, and quantitative finance.',
-    linkedin: 'https://www.linkedin.com/in/alen-hsiao/',
+    linkedin: 'https://www.linkedin.com/in/wlhsiao/',
     twitter: '#',
   },
   {
     name: 'Charles Chiu',
     photo: 'img/CharlesChiu.jpg',
+    accent: ['#071d4b', '#a28db9'],
     role: 'Purdue University, Mechanical Engineering / Quantitative Trading',
     linkedin: 'https://www.linkedin.com/in/charles-chiu-a601b9210/',
     twitter: '#',
@@ -27,6 +29,7 @@ const COHORT = [
   {
     name: 'Albert Chiang',
     photo: 'img/Albert.jpg',
+    accent: ['#24292f', '#774a3b'],
     role: 'National Taiwan University, Civil Engineering / Finance',
     linkedin: 'https://www.linkedin.com/in/shangcheng-chiang-b8568839b/',
     twitter: '#',
@@ -34,6 +37,7 @@ const COHORT = [
   {
     name: 'Dennis Lin',
     photo: 'img/Dennis.jpg',
+    accent: ['#b4865f', '#2d211f'],
     role: 'National Taiwan University, Finance MS - Financial Engineering',
     linkedin: 'https://www.linkedin.com/in/yunhao0',
     twitter: '#',
@@ -41,6 +45,7 @@ const COHORT = [
   {
     name: 'Jack Huang',
     photo: 'img/JackHuang.jpg',
+    accent: ['#303436', '#738696'],
     role: 'National Taiwan University, International Political Economy / KGI Securities Investment Advisory',
     linkedin: 'https://www.linkedin.com/in/%E6%99%89%E6%8F%9A-%E9%BB%83-69bb89290/',
     twitter: '#',
@@ -48,6 +53,7 @@ const COHORT = [
   {
     name: 'Oliver Lin',
     photo: 'img/OliverLin.jpg',
+    accent: ['#0b3764', '#1e6098'],
     role: 'National Taiwan University, Computer Science MS',
     linkedin: 'https://www.linkedin.com/in/%E5%B8%AD%E8%91%A6-%E6%9E%97-918621222/',
     twitter: '#',
@@ -55,6 +61,7 @@ const COHORT = [
   {
     name: 'Ryan Liu',
     photo: 'img/Ryan.jpg',
+    accent: ['#592b21', '#d38347'],
     role: 'National Taiwan University, Information Management',
     linkedin: '#',
     twitter: '#',
@@ -62,6 +69,7 @@ const COHORT = [
   {
     name: 'Sara Ho',
     photo: 'img/Sara.jpg',
+    accent: ['#2f4b35', '#8965b6'],
     role: 'National Tsing Hua University, Quantitative Finance MS',
     linkedin: 'https://www.linkedin.com/in/sara-ho-21b572292/',
     twitter: '#',
@@ -69,6 +77,7 @@ const COHORT = [
   {
     name: 'Wayne Hsieh',
     photo: 'img/Wayne.jpg',
+    accent: ['#3d4c2d', '#a38a4a'],
     role: 'National Taiwan University, International Business',
     linkedin: 'https://www.linkedin.com/in/yuwei-hsieh-759486344',
     twitter: '#',
@@ -76,6 +85,7 @@ const COHORT = [
   {
     name: 'Zack Chiu',
     photo: 'img/Zack.jpg',
+    accent: ['#6e4d32', '#292420'],
     role: 'National Cheng Kung University, Physics',
     linkedin: '#',
     twitter: '#',
@@ -137,7 +147,8 @@ function _links(m) {
 
 function studentCard(m) {
   if (m.photo) {
-    return `<div class="student-preview-card has-photo">
+    const [accentStart, accentEnd] = m.accent || ['var(--navy)', 'var(--teal)'];
+    return `<div class="student-preview-card has-photo" style="--card-accent-start:${accentStart};--card-accent-end:${accentEnd};">
   <div class="spc-photo"><img src="${m.photo}" alt="${m.name}" /></div>
   <div class="spc-body">
     <div class="spc-name">${m.name}</div>
