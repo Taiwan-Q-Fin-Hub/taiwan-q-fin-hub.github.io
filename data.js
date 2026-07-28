@@ -61,7 +61,7 @@ const COHORT = [
   },
   {
     name: 'Sara Ho',
-    monogram: 'SH',
+    photo: 'img/Sara.jpg',
     role: 'National Tsing Hua University, Quantitative Finance MS',
     linkedin: 'https://www.linkedin.com/in/sara-ho-21b572292/',
     twitter: '#',
